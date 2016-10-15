@@ -1,5 +1,7 @@
 class ConcertsController < ApplicationController
-  before_action :set_concert, only: [:show, :edit, :update, :destroy]
+  before_action :set_concert, only: [:show, :edit, :update, :destroy, :reservation]
+
+  skip_before_action :verify_authenticity_token, only: [:reservation]
 
   # GET /concerts
   # GET /concerts.json
@@ -61,6 +63,22 @@ class ConcertsController < ApplicationController
     end
   end
 
+  # POST /concerts/1/book.json
+  def reservation
+    # On crée un nouvel objet reservation à partir des paramètres reçus
+    @reservation = Reservation.new(reservation_params)
+    # On précise que cet object Reservation dépend du Concert concerné
+    @reservation.concert = @concert
+
+    respond_to do |format|
+      if @reservation.save
+        format.json
+      else
+        format.json { render json: @reservation.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_concert
@@ -71,4 +89,10 @@ class ConcertsController < ApplicationController
     def concert_params
       params.require(:concert).permit(:title, :location, :description, :capacity, :price, :image, :date)
     end
+
+    # On ajoute les paramètres qu'on va envoyer avec la reservation
+    def reservation_params
+      params.require(:reservation).permit(:user_id, :nb_people)
+    end
+
 end

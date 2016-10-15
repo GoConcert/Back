@@ -1,0 +1,1 @@
+json.extract! @reservation, :id, :user_name, :nb_people
