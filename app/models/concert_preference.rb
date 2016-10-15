@@ -1,0 +1,2 @@
+class ConcertPreference < ApplicationRecord
+end

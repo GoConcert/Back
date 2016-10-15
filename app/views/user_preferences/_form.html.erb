@@ -1,0 +1,48 @@
+<%= form_for @user_preference, :html => { :class => "form-horizontal user_preference" } do |f| %>
+
+  <% if @user_preference.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@user_preference.errors.count, "error") %> prohibited this user_preference from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @user_preference.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :user_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :user_id, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:user_id) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :style_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :style_id, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:style_id) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :order, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :order, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:order) %>
+  </div>
+
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                user_preferences_path, :class => 'btn btn-default' %>
+    </div>
+  </div>
+
+<% end %>

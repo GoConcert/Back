@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :users
+  resources :music_styles
+  resources :concerts
+  resources :user_preferences
+  resources :reservations
+  resources :concert_preferences
   get 'home/index'
   root 'home#index'
 

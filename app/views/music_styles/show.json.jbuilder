@@ -1,0 +1,1 @@
+json.partial! "music_styles/music_style", music_style: @music_style

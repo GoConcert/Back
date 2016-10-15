@@ -13,3 +13,611 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 931ms (Views: 921.7ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateConcerts (20161015130211)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateConcertPreferences (20161015130445)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "concert_preferences" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "concert_id" integer, "style_id" integer, "order" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161015130445"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateReservations (20161015131208)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "reservations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "concert_id" integer, "nb_people" integer, "total_price" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161015131208"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUserPreferences (20161015131309)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "user_preferences" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "style_id" integer, "order" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161015131309"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateConcerts (20161015132143)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "concerts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "location" varchar, "description" varchar, "capacity" integer, "price" integer, "image" varchar, "date" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161015132143"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateMusicStyles (20161015132246)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "music_styles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161015132246"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUsers (20161015132649)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_name" varchar, "email" varchar, "password" varchar, "first_name" varchar, "last_name" varchar, "location" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161015132649"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-10-15 13:26:59 UTC], ["updated_at", 2016-10-15 13:26:59 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for ::1 at 2016-10-15 15:27:42 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 472ms (Views: 455.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-10-15 15:28:04 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 53ms (Views: 50.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2016-10-15 15:28:07 +0200
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 56ms (Views: 51.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2016-10-15 15:28:18 +0200
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 38ms (Views: 35.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user_preferences" for ::1 at 2016-10-15 15:28:24 +0200
+Processing by UserPreferencesController#index as HTML
+  Rendering user_preferences/index.html.erb within layouts/application
+  [1m[36mUserPreference Load (0.2ms)[0m  [1m[34mSELECT "user_preferences".* FROM "user_preferences"[0m
+  Rendered user_preferences/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 38ms (Views: 34.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/concerts" for ::1 at 2016-10-15 15:34:52 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mConcert Load (0.2ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts"[0m
+  Rendered concerts/index.html.erb within layouts/application (33.1ms)
+Completed 200 OK in 1147ms (Views: 1131.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/images/favicon.ico" for ::1 at 2016-10-15 15:34:53 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/favicon.ico"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/martinez/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/martinez/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/martinez/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered collection of /Users/martinez/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [50 times] (15.1ms)
+  Rendered /Users/martinez/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.5ms)
+  Rendering /Users/martinez/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/martinez/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/martinez/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (107.4ms)
+Started GET "/concerts/new" for ::1 at 2016-10-15 15:34:58 +0200
+Processing by ConcertsController#new as HTML
+  Rendering concerts/new.html.erb within layouts/application
+  Rendered concerts/_form.html.erb (17.6ms)
+  Rendered concerts/new.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 100ms (Views: 87.6ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/concerts" for ::1 at 2016-10-15 15:35:56 +0200
+Processing by ConcertsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x8SgWtLQ6vQB6B+Vz2cmuUfgesD7h3k7K+26Suln9VbejSD/7WI6KgsbZpau03GaVJl/jEsdRb2Cfb8sEVJrJg==", "concert"=>{"title"=>"ABC", "location"=>"Paris, Montmartre", "description"=>"concert des ABC", "capacity"=>"500", "price"=>"15", "image"=>"", "date"=>"20/10/2016"}, "commit"=>"Create Concert"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "concerts" ("title", "location", "description", "capacity", "price", "image", "date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "ABC"], ["location", "Paris, Montmartre"], ["description", "concert des ABC"], ["capacity", 500], ["price", 15], ["image", ""], ["date", Thu, 20 Oct 2016], ["created_at", 2016-10-15 13:35:56 UTC], ["updated_at", 2016-10-15 13:35:56 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/concerts/1
+Completed 302 Found in 8ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/concerts/1" for ::1 at 2016-10-15 15:35:56 +0200
+Processing by ConcertsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcert Load (0.3ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering concerts/show.html.erb within layouts/application
+  Rendered concerts/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 89ms (Views: 82.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/concerts" for ::1 at 2016-10-15 15:36:05 +0200
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mConcert Load (0.3ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts"[0m
+  Rendered concerts/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 77ms (Views: 73.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-10-15 15:39:11 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 388ms (Views: 378.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-10-15 15:39:16 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 91ms (Views: 89.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-10-15 15:39:17 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 91ms (Views: 89.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/concerts" for ::1 at 2016-10-15 15:39:18 +0200
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mConcert Load (0.1ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts"[0m
+  Rendered concerts/index.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 93ms (Views: 88.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/concerts" for ::1 at 2016-10-15 15:39:21 +0200
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mConcert Load (0.1ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts"[0m
+  Rendered concerts/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 61ms (Views: 59.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/concert_preferences" for ::1 at 2016-10-15 15:39:24 +0200
+Processing by ConcertPreferencesController#index as HTML
+  Rendering concert_preferences/index.html.erb within layouts/application
+  [1m[36mConcertPreference Load (0.1ms)[0m  [1m[34mSELECT "concert_preferences".* FROM "concert_preferences"[0m
+  Rendered concert_preferences/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 88ms (Views: 84.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/resevations" for ::1 at 2016-10-15 15:39:32 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/resevations"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/martinez/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/martinez/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/martinez/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered collection of /Users/martinez/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [50 times] (12.8ms)
+  Rendered /Users/martinez/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.6ms)
+  Rendering /Users/martinez/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/martinez/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/martinez/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (97.3ms)
+Started GET "/reservations" for ::1 at 2016-10-15 15:39:47 +0200
+Processing by ReservationsController#index as HTML
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.2ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  Rendered reservations/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 78ms (Views: 75.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/reservations" for ::1 at 2016-10-15 15:39:50 +0200
+Processing by ReservationsController#index as HTML
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.1ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  Rendered reservations/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 76ms (Views: 74.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-10-15 15:39:52 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 73ms (Views: 72.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2016-10-15 15:39:52 +0200
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 77ms (Views: 73.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2016-10-15 15:39:53 +0200
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 88ms (Views: 86.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/new" for ::1 at 2016-10-15 15:39:54 +0200
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (6.3ms)
+  Rendered users/new.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 90ms (Views: 80.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2016-10-15 15:40:27 +0200
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QA9QKFxeP1aZI2rfu4dytxOOoiqH+NZaqPhZQP2zmLPySm5kJr1wuMAp9gmyLwTO9dgxSufii9ahbmwXSJ8F1g==", "user"=>{"user_name"=>"hugo.martinez", "email"=>"hugo.martinez@polytechnique.edu", "password"=>"[FILTERED]", "first_name"=>"Hugo", "last_name"=>"Martinez", "location"=>"Paris"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("user_name", "email", "password", "first_name", "last_name", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_name", "hugo.martinez"], ["email", "hugo.martinez@polytechnique.edu"], ["password", "abcd"], ["first_name", "Hugo"], ["last_name", "Martinez"], ["location", "Paris"], ["created_at", 2016-10-15 13:40:27 UTC], ["updated_at", 2016-10-15 13:40:27 UTC]]
+  [1m[35m (7.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 14ms (ActiveRecord: 8.5ms)
+
+
+Started GET "/users/1" for ::1 at 2016-10-15 15:40:27 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 83ms (Views: 78.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for ::1 at 2016-10-15 15:40:36 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 126ms (Views: 124.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for ::1 at 2016-10-15 15:40:37 +0200
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 119ms (Views: 117.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user_preferences" for ::1 at 2016-10-15 15:40:37 +0200
+Processing by UserPreferencesController#index as HTML
+  Rendering user_preferences/index.html.erb within layouts/application
+  [1m[36mUserPreference Load (0.1ms)[0m  [1m[34mSELECT "user_preferences".* FROM "user_preferences"[0m
+  Rendered user_preferences/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 104ms (Views: 98.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-10-15 15:40:37 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 78ms (Views: 76.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2016-10-15 15:40:41 +0200
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 78ms (Views: 75.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for ::1 at 2016-10-15 15:40:45 +0200
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 70ms (Views: 68.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user_preferences" for ::1 at 2016-10-15 15:40:46 +0200
+Processing by UserPreferencesController#index as HTML
+  Rendering user_preferences/index.html.erb within layouts/application
+  [1m[36mUserPreference Load (0.2ms)[0m  [1m[34mSELECT "user_preferences".* FROM "user_preferences"[0m
+  Rendered user_preferences/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 87ms (Views: 84.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user_preferences" for ::1 at 2016-10-15 15:40:49 +0200
+Processing by UserPreferencesController#index as HTML
+  Rendering user_preferences/index.html.erb within layouts/application
+  [1m[36mUserPreference Load (0.1ms)[0m  [1m[34mSELECT "user_preferences".* FROM "user_preferences"[0m
+  Rendered user_preferences/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 75ms (Views: 73.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user_preferences/new" for ::1 at 2016-10-15 15:40:50 +0200
+Processing by UserPreferencesController#new as HTML
+  Rendering user_preferences/new.html.erb within layouts/application
+  Rendered user_preferences/_form.html.erb (2.4ms)
+  Rendered user_preferences/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 85ms (Views: 75.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/user_preferences" for ::1 at 2016-10-15 15:41:03 +0200
+Processing by UserPreferencesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jaznQCRCOG50yrHRlbIp3IBUAKUs48d3K1aAlR83irVdz5TSyoJkGgYWjoAzF/0daFhAWITjWo5ijZFAi6GLXg==", "user_preference"=>{"user_id"=>"1", "style_id"=>"1", "order"=>"1"}, "commit"=>"Create User preference"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "user_preferences" ("user_id", "style_id", "order", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["style_id", 1], ["order", 1], ["created_at", 2016-10-15 13:41:03 UTC], ["updated_at", 2016-10-15 13:41:03 UTC]]
+  [1m[35m (7.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/user_preferences/1
+Completed 302 Found in 12ms (ActiveRecord: 8.3ms)
+
+
+Started GET "/user_preferences/1" for ::1 at 2016-10-15 15:41:03 +0200
+Processing by UserPreferencesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUserPreference Load (0.2ms)[0m  [1m[34mSELECT  "user_preferences".* FROM "user_preferences" WHERE "user_preferences"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering user_preferences/show.html.erb within layouts/application
+  Rendered user_preferences/show.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 94ms (Views: 90.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user_preferences/1" for ::1 at 2016-10-15 15:41:05 +0200
+Processing by UserPreferencesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUserPreference Load (0.1ms)[0m  [1m[34mSELECT  "user_preferences".* FROM "user_preferences" WHERE "user_preferences"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering user_preferences/show.html.erb within layouts/application
+  Rendered user_preferences/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 80ms (Views: 77.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user_preferences" for ::1 at 2016-10-15 15:41:06 +0200
+Processing by UserPreferencesController#index as HTML
+  Rendering user_preferences/index.html.erb within layouts/application
+  [1m[36mUserPreference Load (0.2ms)[0m  [1m[34mSELECT "user_preferences".* FROM "user_preferences"[0m
+  Rendered user_preferences/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 82ms (Views: 80.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user_preferences/1" for ::1 at 2016-10-15 15:41:06 +0200
+Processing by UserPreferencesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUserPreference Load (0.1ms)[0m  [1m[34mSELECT  "user_preferences".* FROM "user_preferences" WHERE "user_preferences"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering user_preferences/show.html.erb within layouts/application
+  Rendered user_preferences/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 79ms (Views: 77.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for ::1 at 2016-10-15 15:41:08 +0200
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 84ms (Views: 82.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-10-15 15:41:08 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 82ms (Views: 80.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/music_styles" for ::1 at 2016-10-15 15:41:13 +0200
+Processing by MusicStylesController#index as HTML
+  Rendering music_styles/index.html.erb within layouts/application
+  [1m[36mMusicStyle Load (0.1ms)[0m  [1m[34mSELECT "music_styles".* FROM "music_styles"[0m
+  Rendered music_styles/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 79ms (Views: 75.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music_styles/new" for ::1 at 2016-10-15 15:41:14 +0200
+Processing by MusicStylesController#new as HTML
+  Rendering music_styles/new.html.erb within layouts/application
+  Rendered music_styles/_form.html.erb (2.3ms)
+  Rendered music_styles/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 94ms (Views: 85.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/music_styles" for ::1 at 2016-10-15 15:42:24 +0200
+Processing by MusicStylesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rPqcMqpLjyRMllUR34HSmN4Yohr8SA3lSTuEIjOf0yKMHuH869FT4QfFq27Z677VguaH8A9DsG/Vf2NwonmzAQ==", "music_style"=>{"name"=>"Electro", "description"=>"La musique électronique est un type de musique conçu dans les années 1950 avec des générateurs de signaux et de sons synthétiques."}, "commit"=>"Create Music style"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "music_styles" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Electro"], ["description", "La musique électronique est un type de musique conçu dans les années 1950 avec des générateurs de signaux et de sons synthétiques."], ["created_at", 2016-10-15 13:42:24 UTC], ["updated_at", 2016-10-15 13:42:24 UTC]]
+  [1m[35m (8.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/music_styles/1
+Completed 302 Found in 12ms (ActiveRecord: 8.8ms)
+
+
+Started GET "/music_styles/1" for ::1 at 2016-10-15 15:42:24 +0200
+Processing by MusicStylesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicStyle Load (0.2ms)[0m  [1m[34mSELECT  "music_styles".* FROM "music_styles" WHERE "music_styles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering music_styles/show.html.erb within layouts/application
+  Rendered music_styles/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 83ms (Views: 79.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music_styles" for ::1 at 2016-10-15 15:42:28 +0200
+Processing by MusicStylesController#index as HTML
+  Rendering music_styles/index.html.erb within layouts/application
+  [1m[36mMusicStyle Load (0.1ms)[0m  [1m[34mSELECT "music_styles".* FROM "music_styles"[0m
+  Rendered music_styles/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 75ms (Views: 71.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/reservations" for ::1 at 2016-10-15 15:42:38 +0200
+Processing by ReservationsController#index as HTML
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.2ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  Rendered reservations/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 82ms (Views: 80.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/reservations" for ::1 at 2016-10-15 15:42:41 +0200
+Processing by ReservationsController#index as HTML
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.1ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  Rendered reservations/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 82ms (Views: 79.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/reservations/new" for ::1 at 2016-10-15 15:42:44 +0200
+Processing by ReservationsController#new as HTML
+  Rendering reservations/new.html.erb within layouts/application
+  Rendered reservations/_form.html.erb (3.1ms)
+  Rendered reservations/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 83ms (Views: 73.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/reservations" for ::1 at 2016-10-15 15:43:03 +0200
+Processing by ReservationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D5PGYPTGiECttT92hi8QcJIZ3fyoDBemSHOsxrWvfs6NvIwRiMJgYJhN3QkHNHeCGJS90LfFp1hfzqaXrz4lBw==", "reservation"=>{"user_id"=>"1", "concert_id"=>"1", "nb_people"=>"3", "total_price"=>"45"}, "commit"=>"Create Reservation"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "reservations" ("user_id", "concert_id", "nb_people", "total_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["concert_id", 1], ["nb_people", 3], ["total_price", 45], ["created_at", 2016-10-15 13:43:03 UTC], ["updated_at", 2016-10-15 13:43:03 UTC]]
+  [1m[35m (8.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/reservations/1
+Completed 302 Found in 12ms (ActiveRecord: 9.2ms)
+
+
+Started GET "/reservations/1" for ::1 at 2016-10-15 15:43:03 +0200
+Processing by ReservationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReservation Load (0.2ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering reservations/show.html.erb within layouts/application
+  Rendered reservations/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 84ms (Views: 82.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/reservations" for ::1 at 2016-10-15 15:43:06 +0200
+Processing by ReservationsController#index as HTML
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.1ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  Rendered reservations/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 80ms (Views: 77.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-10-15 15:44:45 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 69ms (Views: 67.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/favicon.ico" for ::1 at 2016-10-15 15:44:45 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/favicon.ico"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/martinez/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/martinez/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/martinez/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered collection of /Users/martinez/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [50 times] (13.0ms)
+  Rendered /Users/martinez/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendering /Users/martinez/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/martinez/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/martinez/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (82.9ms)
+Started GET "/users/1.json" for ::1 at 2016-10-15 15:44:58 +0200
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.json.jbuilder
+  Rendered users/_user.json.jbuilder (0.7ms)
+  Rendered users/show.json.jbuilder (5.2ms)
+Completed 200 OK in 15ms (Views: 12.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/concerts/1.json" for ::1 at 2016-10-15 15:45:14 +0200
+Processing by ConcertsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mConcert Load (0.3ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering concerts/show.json.jbuilder
+  Rendered concerts/_concert.json.jbuilder (0.7ms)
+  Rendered concerts/show.json.jbuilder (2.0ms)
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 0.3ms)
+
+

@@ -1,0 +1,1 @@
+json.array! @concert_preferences, partial: 'concert_preferences/concert_preference', as: :concert_preference

@@ -1,0 +1,1 @@
+json.array! @music_styles, partial: 'music_styles/music_style', as: :music_style
