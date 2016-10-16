@@ -861,3 +861,144 @@ Processing by ReservationsController#index as HTML
 Completed 200 OK in 135ms (Views: 133.1ms | ActiveRecord: 0.2ms)
 
 
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for ::1 at 2016-10-16 13:59:11 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (38.0ms)
+Completed 200 OK in 9278ms (Views: 9230.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-10-16 14:00:35 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 1050ms (Views: 1026.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/concert" for ::1 at 2016-10-16 14:09:27 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/concert"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+Started GET "/concerts" for ::1 at 2016-10-16 14:09:30 +0200
+  Rendered collection of c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [51 times] (69.0ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (154.1ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (2789.3ms)
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts"[0m
+  Rendered concerts/index.html.erb within layouts/application (27.5ms)
+Completed 200 OK in 532ms (Views: 478.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/concerts/new" for ::1 at 2016-10-16 14:12:14 +0200
+Processing by ConcertsController#new as HTML
+  Rendering concerts/new.html.erb within layouts/application
+  Rendered concerts/_form.html.erb (34.5ms)
+  Rendered concerts/new.html.erb within layouts/application (67.0ms)
+Completed 200 OK in 619ms (Views: 589.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/concerts/new" for ::1 at 2016-10-16 14:13:08 +0200
+Processing by ConcertsController#new as HTML
+  Rendering concerts/new.html.erb within layouts/application
+  Rendered concerts/_form.html.erb (7.0ms)
+  Rendered concerts/new.html.erb within layouts/application (36.0ms)
+Completed 200 OK in 661ms (Views: 602.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/concerts" for ::1 at 2016-10-16 14:14:09 +0200
+Processing by ConcertsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GmQjdRt3Vp3kFBeoGRfpqV5EQfmZuyCNex+lhzKw+889DVwZ297kuN3PSWO45EhEN4dBngqHgh6NIP/KChT6fw==", "concert"=>{"title"=>"Test", "location"=>"Paris, Gare de Lyon", "description"=>"Concert test", "capacity"=>"1000", "price"=>"10", "image"=>"http://extranet.tourismeweb.com/_uploads/4F55393B353736664C4B/FMAIDF0780006985-1.jpg", "date"=>"16/10/2016"}, "commit"=>"Create Concert"}
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "concerts" ("title", "location", "description", "capacity", "price", "image", "date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Test"], ["location", "Paris, Gare de Lyon"], ["description", "Concert test"], ["capacity", 1000], ["price", 10], ["image", "http://extranet.tourismeweb.com/_uploads/4F55393B353736664C4B/FMAIDF0780006985-1.jpg"], ["date", Sun, 16 Oct 2016], ["created_at", 2016-10-16 12:14:09 UTC], ["updated_at", 2016-10-16 12:14:09 UTC]]
+  [1m[35m (16.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/concerts/2
+Completed 302 Found in 43ms (ActiveRecord: 20.5ms)
+
+
+Started GET "/concerts/2" for ::1 at 2016-10-16 14:14:09 +0200
+Processing by ConcertsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering concerts/show.html.erb within layouts/application
+  Rendered concerts/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 535ms (Views: 473.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/concerts" for ::1 at 2016-10-16 14:14:13 +0200
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts"[0m
+  Rendered concerts/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 572ms (Views: 541.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/concerts.json" for ::1 at 2016-10-16 14:14:22 +0200
+Processing by ConcertsController#index as JSON
+  Rendering concerts/index.json.jbuilder
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts"[0m
+  Rendered concerts/_concert.json.jbuilder (2.0ms)
+  Rendered concerts/_concert.json.jbuilder (1.0ms)
+  Rendered concerts/index.json.jbuilder (51.0ms)
+Completed 200 OK in 347ms (Views: 281.7ms | ActiveRecord: 1.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.0ms)[0m  [1m[32mINSERT INTO "concerts" ("title", "location", "description", "capacity", "price", "image", "date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Mon premier Show"], ["location", "Salle Pleyel"], ["description", "Concert blabla"], ["capacity", 500], ["price", 30], ["image", "http://www.sallepleyel.fr/img/visuel/diaporama/salle_concert_scene.jpg"], ["date", Thu, 30 Oct 2014], ["created_at", 2016-10-16 12:24:16 UTC], ["updated_at", 2016-10-16 12:24:16 UTC]]
+  [1m[35m (19.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "concerts" ("title", "location", "description", "capacity", "price", "image", "date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Sébastien Tellier"], ["location", "Nouveau Casino"], ["description", "L'Aventura"], ["capacity", 500], ["price", 36], ["image", "http://www.gqmagazine.fr/uploads/images/201421/cc/l_aventura_de_s__bastien_tellier_7651.jpeg"], ["date", Sun, 19 Oct 2014], ["created_at", 2016-10-16 12:24:16 UTC], ["updated_at", 2016-10-16 12:24:16 UTC]]
+  [1m[35m (15.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/concerts" for ::1 at 2016-10-16 14:24:35 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts"[0m
+  Rendered concerts/index.html.erb within layouts/application (128.3ms)
+Completed 200 OK in 2289ms (Views: 2225.8ms | ActiveRecord: 5.0ms)
+
+
