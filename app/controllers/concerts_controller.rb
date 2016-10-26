@@ -79,6 +79,10 @@ class ConcertsController < ApplicationController
     end
   end
 
+  def search
+	@concerts=Concert.where(location: params[:location])
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_concert
