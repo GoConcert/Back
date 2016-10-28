@@ -4136,3 +4136,41 @@ app/controllers/concerts_controller.rb:89:in `set_concert'
   Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
   Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1724.5ms)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at C:/Users/etien/Desktop/Workshops/Back/config/environment.rb:5)
+Started GET "/concerts/search.json?location=Paris" for ::1 at 2016-10-28 22:04:51 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ConcertsController#search as JSON
+  Parameters: {"location"=>"Paris"}
+  Rendering concerts/search.json.jbuilder
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."location" = ?[0m  [["location", "Paris"]]
+  Rendered concerts/_concert.json.jbuilder (3.0ms)
+  Rendered concerts/_concert.json.jbuilder (1.0ms)
+  Rendered concerts/search.json.jbuilder (72.0ms)
+Completed 200 OK in 320ms (Views: 239.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/concerts/search.json?location=:Paris" for ::1 at 2016-10-28 22:05:02 +0200
+Processing by ConcertsController#search as JSON
+  Parameters: {"location"=>":Paris"}
+  Rendering concerts/search.json.jbuilder
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."location" = ?[0m  [["location", ":Paris"]]
+  Rendered concerts/search.json.jbuilder (2.0ms)
+Completed 200 OK in 161ms (Views: 139.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/concerts/search.json?location=Paris" for ::1 at 2016-10-28 22:05:08 +0200
+Processing by ConcertsController#search as JSON
+  Parameters: {"location"=>"Paris"}
+  Rendering concerts/search.json.jbuilder
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."location" = ?[0m  [["location", "Paris"]]
+  Rendered concerts/_concert.json.jbuilder (2.0ms)
+  Rendered concerts/_concert.json.jbuilder (1.0ms)
+  Rendered concerts/search.json.jbuilder (17.0ms)
+Completed 200 OK in 197ms (Views: 172.2ms | ActiveRecord: 0.0ms)
+
+
