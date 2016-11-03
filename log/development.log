@@ -5439,3 +5439,459 @@ app/views/concerts/search.html.erb:4:in `_app_views_concerts_search_html_erb__67
   Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
   Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1364.8ms)
+Started GET "/concerts/search.json?music_style=Jazz" for ::1 at 2016-11-03 11:39:23 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"music_style"=>"Jazz"}
+  [1m[36mMusicStyle Load (0.5ms)[0m  [1m[34mSELECT  "music_styles".* FROM "music_styles" WHERE "music_styles"."name" = ? ORDER BY "music_styles"."id" ASC LIMIT ?[0m  [["name", "Jazz"], ["LIMIT", 1]]
+  [1m[36mConcertPreference Load (0.5ms)[0m  [1m[34mSELECT "concert_preferences".* FROM "concert_preferences" WHERE "concert_preferences"."style_id" = ?[0m  [["style_id", 3]]
+  Rendering concerts/search.json.jbuilder
+  [1m[36mConcert Load (0.5ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."id" = ?[0m  [["id", 2]]
+  Rendered concerts/_concert.json.jbuilder (109.5ms)
+  Rendered concerts/search.json.jbuilder (143.0ms)
+Completed 500 Internal Server Error in 702ms (ActiveRecord: 9.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for #<Concert::ActiveRecord_Relation:0x00000011607168>
+Did you mean?  ids):
+    1: json.extract! concert, :id, :title, :location, :description, :capacity, :price, :image, :date, :created_at, :updated_at
+    2: json.url concert_url(concert, format: :json)
+  
+app/views/concerts/_concert.json.jbuilder:1:in `_app_views_concerts__concert_json_jbuilder__1757794479_129235260'
+app/views/concerts/search.json.jbuilder:1:in `_app_views_concerts_search_json_jbuilder__116138897_119693840'
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.5ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (2083.7ms)
+Started GET "/concerts/search.json?music_style=Jazz" for ::1 at 2016-11-03 11:47:11 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"music_style"=>"Jazz"}
+  [1m[36mMusicStyle Load (0.5ms)[0m  [1m[34mSELECT  "music_styles".* FROM "music_styles" WHERE "music_styles"."name" = ? ORDER BY "music_styles"."id" ASC LIMIT ?[0m  [["name", "Jazz"], ["LIMIT", 1]]
+  [1m[36mConcertPreference Load (0.5ms)[0m  [1m[34mSELECT "concert_preferences".* FROM "concert_preferences" WHERE "concert_preferences"."style_id" = ?[0m  [["style_id", 3]]
+  Rendering concerts/search.json.jbuilder
+  [1m[36mConcert Load (0.5ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."id" IN (1, 3)[0m
+  Rendered concerts/_concert.json.jbuilder (4.0ms)
+  Rendered concerts/_concert.json.jbuilder (1.5ms)
+  Rendered concerts/search.json.jbuilder (52.0ms)
+Completed 200 OK in 383ms (Views: 281.2ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/concerts/search.json?music_style=Jazz&location=Paris" for ::1 at 2016-11-03 11:55:43 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"music_style"=>"Jazz", "location"=>"Paris"}
+  [1m[36mMusicStyle Load (1.0ms)[0m  [1m[34mSELECT  "music_styles".* FROM "music_styles" WHERE "music_styles"."name" = ? ORDER BY "music_styles"."id" ASC LIMIT ?[0m  [["name", "Jazz"], ["LIMIT", 1]]
+  [1m[36mConcertPreference Load (0.5ms)[0m  [1m[34mSELECT "concert_preferences".* FROM "concert_preferences" WHERE "concert_preferences"."style_id" = ?[0m  [["style_id", 3]]
+  Rendering concerts/search.json.jbuilder
+  [1m[36mConcert Load (0.5ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."id" IN (1, 3) AND "concerts"."location" = ?[0m  [["location", "Paris"]]
+  Rendered concerts/_concert.json.jbuilder (1.5ms)
+  Rendered concerts/search.json.jbuilder (43.0ms)
+Completed 200 OK in 604ms (Views: 344.1ms | ActiveRecord: 33.4ms)
+
+
+Started GET "/concerts/search.json?music_style=Jazz&location=Toulouse" for ::1 at 2016-11-03 11:56:04 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"music_style"=>"Jazz", "location"=>"Toulouse"}
+  [1m[36mMusicStyle Load (1.0ms)[0m  [1m[34mSELECT  "music_styles".* FROM "music_styles" WHERE "music_styles"."name" = ? ORDER BY "music_styles"."id" ASC LIMIT ?[0m  [["name", "Jazz"], ["LIMIT", 1]]
+  [1m[36mConcertPreference Load (0.5ms)[0m  [1m[34mSELECT "concert_preferences".* FROM "concert_preferences" WHERE "concert_preferences"."style_id" = ?[0m  [["style_id", 3]]
+  Rendering concerts/search.json.jbuilder
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."id" IN (1, 3) AND "concerts"."location" = ?[0m  [["location", "Toulouse"]]
+  Rendered concerts/search.json.jbuilder (15.0ms)
+Completed 200 OK in 589ms (Views: 510.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/concerts/search.json?music_style=Jazz&location=Lyon" for ::1 at 2016-11-03 11:56:10 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"music_style"=>"Jazz", "location"=>"Lyon"}
+  [1m[36mMusicStyle Load (5.0ms)[0m  [1m[34mSELECT  "music_styles".* FROM "music_styles" WHERE "music_styles"."name" = ? ORDER BY "music_styles"."id" ASC LIMIT ?[0m  [["name", "Jazz"], ["LIMIT", 1]]
+  [1m[36mConcertPreference Load (0.5ms)[0m  [1m[34mSELECT "concert_preferences".* FROM "concert_preferences" WHERE "concert_preferences"."style_id" = ?[0m  [["style_id", 3]]
+  Rendering concerts/search.json.jbuilder
+  [1m[36mConcert Load (0.5ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."id" IN (1, 3) AND "concerts"."location" = ?[0m  [["location", "Lyon"]]
+  Rendered concerts/search.json.jbuilder (6.5ms)
+Completed 200 OK in 343ms (Views: 259.6ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/concerts/search.json?music_style=Jazz" for ::1 at 2016-11-03 11:56:16 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"music_style"=>"Jazz"}
+  [1m[36mMusicStyle Load (0.5ms)[0m  [1m[34mSELECT  "music_styles".* FROM "music_styles" WHERE "music_styles"."name" = ? ORDER BY "music_styles"."id" ASC LIMIT ?[0m  [["name", "Jazz"], ["LIMIT", 1]]
+  [1m[36mConcertPreference Load (1.8ms)[0m  [1m[34mSELECT "concert_preferences".* FROM "concert_preferences" WHERE "concert_preferences"."style_id" = ?[0m  [["style_id", 3]]
+  Rendering concerts/search.json.jbuilder
+  Rendered concerts/search.json.jbuilder (1.5ms)
+Completed 200 OK in 481ms (Views: 352.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/concerts/search.json?music_style=Jazz" for ::1 at 2016-11-03 11:56:35 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"music_style"=>"Jazz"}
+  [1m[36mMusicStyle Load (0.5ms)[0m  [1m[34mSELECT  "music_styles".* FROM "music_styles" WHERE "music_styles"."name" = ? ORDER BY "music_styles"."id" ASC LIMIT ?[0m  [["name", "Jazz"], ["LIMIT", 1]]
+  [1m[36mConcertPreference Load (1.0ms)[0m  [1m[34mSELECT "concert_preferences".* FROM "concert_preferences" WHERE "concert_preferences"."style_id" = ?[0m  [["style_id", 3]]
+  Rendering concerts/search.json.jbuilder
+  Rendered concerts/search.json.jbuilder (1.0ms)
+Completed 200 OK in 362ms (Views: 311.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/concerts/search.json?music_style=Jazz" for ::1 at 2016-11-03 11:56:37 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"music_style"=>"Jazz"}
+  [1m[36mMusicStyle Load (0.5ms)[0m  [1m[34mSELECT  "music_styles".* FROM "music_styles" WHERE "music_styles"."name" = ? ORDER BY "music_styles"."id" ASC LIMIT ?[0m  [["name", "Jazz"], ["LIMIT", 1]]
+  [1m[36mConcertPreference Load (0.5ms)[0m  [1m[34mSELECT "concert_preferences".* FROM "concert_preferences" WHERE "concert_preferences"."style_id" = ?[0m  [["style_id", 3]]
+  Rendering concerts/search.json.jbuilder
+  Rendered concerts/search.json.jbuilder (2.0ms)
+Completed 200 OK in 267ms (Views: 224.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/concerts/search.json?music_style=Jazz" for ::1 at 2016-11-03 11:57:15 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"music_style"=>"Jazz"}
+  [1m[36mMusicStyle Load (1.0ms)[0m  [1m[34mSELECT  "music_styles".* FROM "music_styles" WHERE "music_styles"."name" = ? ORDER BY "music_styles"."id" ASC LIMIT ?[0m  [["name", "Jazz"], ["LIMIT", 1]]
+  [1m[36mConcertPreference Load (6.5ms)[0m  [1m[34mSELECT "concert_preferences".* FROM "concert_preferences" WHERE "concert_preferences"."style_id" = ?[0m  [["style_id", 3]]
+  Rendering concerts/search.json.jbuilder
+  [1m[36mConcert Load (0.5ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."id" IN (1, 3)[0m
+  Rendered concerts/_concert.json.jbuilder (3.5ms)
+  Rendered concerts/_concert.json.jbuilder (1.5ms)
+  Rendered concerts/search.json.jbuilder (54.0ms)
+Completed 200 OK in 423ms (Views: 293.6ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/concerts/search.json?music_style=Jazz" for ::1 at 2016-11-03 11:58:29 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"music_style"=>"Jazz"}
+  [1m[36mMusicStyle Load (0.5ms)[0m  [1m[34mSELECT  "music_styles".* FROM "music_styles" WHERE "music_styles"."name" = ? ORDER BY "music_styles"."id" ASC LIMIT ?[0m  [["name", "Jazz"], ["LIMIT", 1]]
+  [1m[36mConcertPreference Load (0.5ms)[0m  [1m[34mSELECT "concert_preferences".* FROM "concert_preferences" WHERE "concert_preferences"."style_id" = ?[0m  [["style_id", 3]]
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 6.0ms)
+
+
+  
+NoMethodError (undefined method `where' for nil:NilClass):
+  
+app/controllers/concerts_controller.rb:99:in `search'
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (2417.4ms)
+Started GET "/concerts/search.json?music_style=Jazz" for ::1 at 2016-11-03 11:59:00 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"music_style"=>"Jazz"}
+  [1m[36mMusicStyle Load (2.5ms)[0m  [1m[34mSELECT  "music_styles".* FROM "music_styles" WHERE "music_styles"."name" = ? ORDER BY "music_styles"."id" ASC LIMIT ?[0m  [["name", "Jazz"], ["LIMIT", 1]]
+  [1m[36mConcertPreference Load (0.5ms)[0m  [1m[34mSELECT "concert_preferences".* FROM "concert_preferences" WHERE "concert_preferences"."style_id" = ?[0m  [["style_id", 3]]
+  Rendering concerts/search.json.jbuilder
+  [1m[36mConcert Load (0.5ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."id" IN (1, 3)[0m
+  Rendered concerts/_concert.json.jbuilder (2.5ms)
+  Rendered concerts/_concert.json.jbuilder (0.5ms)
+  Rendered concerts/search.json.jbuilder (55.0ms)
+Completed 200 OK in 434ms (Views: 303.9ms | ActiveRecord: 17.0ms)
+
+
+Started GET "/concerts/search.json?music_style=Jazz&location=Lyon" for ::1 at 2016-11-03 11:59:48 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"music_style"=>"Jazz", "location"=>"Lyon"}
+  [1m[36mMusicStyle Load (1.0ms)[0m  [1m[34mSELECT  "music_styles".* FROM "music_styles" WHERE "music_styles"."name" = ? ORDER BY "music_styles"."id" ASC LIMIT ?[0m  [["name", "Jazz"], ["LIMIT", 1]]
+  [1m[36mConcertPreference Load (1.5ms)[0m  [1m[34mSELECT "concert_preferences".* FROM "concert_preferences" WHERE "concert_preferences"."style_id" = ?[0m  [["style_id", 3]]
+  Rendering concerts/search.json.jbuilder
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."location" = ? AND "concerts"."id" IN (1, 3)[0m  [["location", "Lyon"]]
+  Rendered concerts/search.json.jbuilder (54.0ms)
+Completed 200 OK in 728ms (Views: 591.0ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/concerts/search.json?music_style=Jazz" for ::1 at 2016-11-03 11:59:56 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"music_style"=>"Jazz"}
+  [1m[36mMusicStyle Load (4.5ms)[0m  [1m[34mSELECT  "music_styles".* FROM "music_styles" WHERE "music_styles"."name" = ? ORDER BY "music_styles"."id" ASC LIMIT ?[0m  [["name", "Jazz"], ["LIMIT", 1]]
+  [1m[36mConcertPreference Load (1.0ms)[0m  [1m[34mSELECT "concert_preferences".* FROM "concert_preferences" WHERE "concert_preferences"."style_id" = ?[0m  [["style_id", 3]]
+  Rendering concerts/search.json.jbuilder
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."id" IN (1, 3)[0m
+  Rendered concerts/_concert.json.jbuilder (3.5ms)
+  Rendered concerts/_concert.json.jbuilder (1.0ms)
+  Rendered concerts/search.json.jbuilder (56.0ms)
+Completed 200 OK in 404ms (Views: 312.1ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/concerts/search.json?music_style=Jazz&location=Paris" for ::1 at 2016-11-03 12:00:22 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"music_style"=>"Jazz", "location"=>"Paris"}
+  [1m[36mMusicStyle Load (0.5ms)[0m  [1m[34mSELECT  "music_styles".* FROM "music_styles" WHERE "music_styles"."name" = ? ORDER BY "music_styles"."id" ASC LIMIT ?[0m  [["name", "Jazz"], ["LIMIT", 1]]
+  [1m[36mConcertPreference Load (0.5ms)[0m  [1m[34mSELECT "concert_preferences".* FROM "concert_preferences" WHERE "concert_preferences"."style_id" = ?[0m  [["style_id", 3]]
+  Rendering concerts/search.json.jbuilder
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."location" = ? AND "concerts"."id" IN (1, 3)[0m  [["location", "Paris"]]
+  Rendered concerts/_concert.json.jbuilder (2.0ms)
+  Rendered concerts/search.json.jbuilder (25.0ms)
+Completed 200 OK in 403ms (Views: 268.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/concert_preferences" for ::1 at 2016-11-03 12:00:48 +0100
+Processing by ConcertPreferencesController#index as HTML
+  Rendering concert_preferences/index.html.erb within layouts/application
+  [1m[36mConcertPreference Load (0.5ms)[0m  [1m[34mSELECT "concert_preferences".* FROM "concert_preferences"[0m
+  Rendered concert_preferences/index.html.erb within layouts/application (52.0ms)
+Completed 200 OK in 2341ms (Views: 2156.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/concerts/search.json?music_style=Jazz&location=Paris" for ::1 at 2016-11-03 12:01:08 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"music_style"=>"Jazz", "location"=>"Paris"}
+  [1m[36mMusicStyle Load (5.5ms)[0m  [1m[34mSELECT  "music_styles".* FROM "music_styles" WHERE "music_styles"."name" = ? ORDER BY "music_styles"."id" ASC LIMIT ?[0m  [["name", "Jazz"], ["LIMIT", 1]]
+  [1m[36mConcertPreference Load (10.0ms)[0m  [1m[34mSELECT "concert_preferences".* FROM "concert_preferences" WHERE "concert_preferences"."style_id" = ?[0m  [["style_id", 3]]
+  Rendering concerts/search.json.jbuilder
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."location" = ? AND "concerts"."id" IN (1, 3)[0m  [["location", "Paris"]]
+  Rendered concerts/_concert.json.jbuilder (1.5ms)
+  Rendered concerts/search.json.jbuilder (30.0ms)
+Completed 200 OK in 508ms (Views: 385.5ms | ActiveRecord: 16.5ms)
+
+
+Started GET "/concerts" for ::1 at 2016-11-03 12:01:13 +0100
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mConcert Load (1.5ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts"[0m
+  Rendered concerts/index.html.erb within layouts/application (67.0ms)
+Completed 200 OK in 2424ms (Views: 2205.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/concerts" for ::1 at 2016-11-03 12:01:17 +0100
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mConcert Load (3.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts"[0m
+  Rendered concerts/index.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 2276ms (Views: 2202.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/concerts/3/edit" for ::1 at 2016-11-03 12:01:34 +0100
+Processing by ConcertsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 127ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `set_music_style' for #<ConcertsController:0x0000000f017958>):
+  
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:382:in `block in make_lambda'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:150:in `block (2 levels) in halting_and_conditional'
+actionpack (5.0.0.1) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:151:in `block in halting_and_conditional'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:454:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:454:in `each'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:454:in `call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.0.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.0.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.0.1) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.0.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.0.1) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.0.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.0.1) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.0.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.0.1) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.0.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.0.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.0.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.0.1) lib/active_record/migration.rb:552:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.5ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (2637.5ms)
+Started GET "/concerts/search.json?location=paris" for ::1 at 2016-11-03 12:06:11 +0100
+  
+SyntaxError (c:/Users/etien/Desktop/Workshops/Back/app/controllers/concerts_controller.rb:87: syntax error, unexpected '=', expecting ')'
+...cert.where(‘lower(location) = ?’, params[:location].down...
+...                               ^
+c:/Users/etien/Desktop/Workshops/Back/app/controllers/concerts_controller.rb:87: syntax error, unexpected ')', expecting keyword_end
+...’, params[:location].downcase)
+...                                ^):
+  
+app/controllers/concerts_controller.rb:87: syntax error, unexpected '=', expecting ')'
+app/controllers/concerts_controller.rb:87: syntax error, unexpected ')', expecting keyword_end
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.5ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (2414.2ms)
+Started GET "/concerts/search.json?location=paris" for ::1 at 2016-11-03 12:06:34 +0100
+  
+SyntaxError (c:/Users/etien/Desktop/Workshops/Back/app/controllers/concerts_controller.rb:87: syntax error, unexpected '=', expecting ')'
+...cert.where(‘lower(location) = ?’, params[:location].down...
+...                               ^
+c:/Users/etien/Desktop/Workshops/Back/app/controllers/concerts_controller.rb:87: syntax error, unexpected ')', expecting keyword_end
+...’, params[:location].downcase)
+...                                ^):
+  
+app/controllers/concerts_controller.rb:87: syntax error, unexpected '=', expecting ')'
+app/controllers/concerts_controller.rb:87: syntax error, unexpected ')', expecting keyword_end
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (2385.4ms)
+Started GET "/concerts/search.json?location=paris" for ::1 at 2016-11-03 12:07:55 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"location"=>"paris"}
+  Rendering concerts/search.json.jbuilder
+  [1m[36mConcert Load (0.5ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."location" = ?[0m  [["location", "paris"]]
+  Rendered concerts/search.json.jbuilder (43.5ms)
+Completed 200 OK in 423ms (Views: 366.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/concerts/search.json?location=paris" for ::1 at 2016-11-03 12:08:16 +0100
+  
+SyntaxError (c:/Users/etien/Desktop/Workshops/Back/app/controllers/concerts_controller.rb:87: syntax error, unexpected '=', expecting ')'
+...cert.where(‘lower(location) = ?’, params[:location].down...
+...                               ^
+c:/Users/etien/Desktop/Workshops/Back/app/controllers/concerts_controller.rb:87: syntax error, unexpected ')', expecting keyword_end
+...’, params[:location].downcase)
+...                                ^):
+  
+app/controllers/concerts_controller.rb:87: syntax error, unexpected '=', expecting ')'
+app/controllers/concerts_controller.rb:87: syntax error, unexpected ')', expecting keyword_end
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.5ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (2622.7ms)
+Started GET "/concerts/search.json?location=paris" for ::1 at 2016-11-03 12:09:03 +0100
+  
+SyntaxError (c:/Users/etien/Desktop/Workshops/Back/app/controllers/concerts_controller.rb:87: syntax error, unexpected '=', expecting ')'
+...cert.where(‘lower(location) = ?’, (params[:location]).do...
+...                               ^
+c:/Users/etien/Desktop/Workshops/Back/app/controllers/concerts_controller.rb:87: syntax error, unexpected ')', expecting keyword_end
+..., (params[:location]).downcase)
+...                               ^):
+  
+app/controllers/concerts_controller.rb:87: syntax error, unexpected '=', expecting ')'
+app/controllers/concerts_controller.rb:87: syntax error, unexpected ')', expecting keyword_end
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.5ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (2530.7ms)
+Started GET "/concerts/search.json?location=paris" for ::1 at 2016-11-03 12:10:04 +0100
+  
+SyntaxError (c:/Users/etien/Desktop/Workshops/Back/app/controllers/concerts_controller.rb:89: syntax error, unexpected '=', expecting ')'
+	concerts=Concert.where(‘lower(location) = ?’, loc.downcase)
+	                                           ^
+c:/Users/etien/Desktop/Workshops/Back/app/controllers/concerts_controller.rb:89: syntax error, unexpected ')', expecting keyword_end
+	concerts=Concert.where(‘lower(location) = ?’, loc.downcase)
+	                                                               ^):
+  
+app/controllers/concerts_controller.rb:89: syntax error, unexpected '=', expecting ')'
+app/controllers/concerts_controller.rb:89: syntax error, unexpected ')', expecting keyword_end
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.5ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (2451.0ms)
+Started GET "/concerts/search.json?location=paris" for ::1 at 2016-11-03 12:10:18 +0100
+  
+SyntaxError (c:/Users/etien/Desktop/Workshops/Back/app/controllers/concerts_controller.rb:89: syntax error, unexpected '=', expecting ')'
+	concerts=Concert.where(‘lower(location) = ?’, loc.downcase)
+	                                           ^
+c:/Users/etien/Desktop/Workshops/Back/app/controllers/concerts_controller.rb:89: syntax error, unexpected ')', expecting keyword_end
+	concerts=Concert.where(‘lower(location) = ?’, loc.downcase)
+	                                                               ^):
+  
+app/controllers/concerts_controller.rb:89: syntax error, unexpected '=', expecting ')'
+app/controllers/concerts_controller.rb:89: syntax error, unexpected ')', expecting keyword_end
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.5ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.5ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (2559.0ms)
+Started GET "/concerts/search.json?location=paris" for ::1 at 2016-11-03 12:11:38 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"location"=>"paris"}
+  Rendering concerts/search.json.jbuilder
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE (lower(location) = 'paris')[0m
+  Rendered concerts/_concert.json.jbuilder (3.0ms)
+  Rendered concerts/_concert.json.jbuilder (1.0ms)
+  Rendered concerts/search.json.jbuilder (240.5ms)
+Completed 200 OK in 563ms (Views: 481.9ms | ActiveRecord: 25.5ms)
+
+
+Started GET "/concerts/search.json?location=paris" for ::1 at 2016-11-03 12:12:00 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"location"=>"paris"}
+  Rendering concerts/search.json.jbuilder
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE (lower(location) = 'paris')[0m
+  Rendered concerts/_concert.json.jbuilder (3.0ms)
+  Rendered concerts/_concert.json.jbuilder (1.5ms)
+  Rendered concerts/search.json.jbuilder (248.5ms)
+Completed 200 OK in 662ms (Views: 608.7ms | ActiveRecord: 5.0ms)
+
+

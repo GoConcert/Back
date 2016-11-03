@@ -84,7 +84,10 @@ class ConcertsController < ApplicationController
 
   def search
 	if params[:location] 
-	then @concerts=Concert.where(location: params[:location]) 
+	then 
+	concerts=Concert.where("lower(location) = ?", params[:location].downcase)
+	#then concerts=Concert.where(location: params[:location.downcase])
+	else concerts=Concert
 	end
 
 	if  params[:music_style]
@@ -92,12 +95,14 @@ class ConcertsController < ApplicationController
 	music_styles=MusicStyle.where(name: params[:music_style])
 	style_id=music_styles.first.id
 	concert_preferences=ConcertPreference.where(style_id: style_id)
-	@concerts=[]
+	concert_ids=[]
 	concert_preferences.each do |concert_preference|
-	concert_id=concert_preference.id
-	@concerts << Concert.where(id: concert_id)
+	concert_ids << concert_preference.concert_id
 	end
+	concerts = concerts.where(id: concert_ids)
 	end
+	
+	@concerts=concerts
   end
 
   private
