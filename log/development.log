@@ -4174,3 +4174,429 @@ Processing by ConcertsController#search as JSON
 Completed 200 OK in 197ms (Views: 172.2ms | ActiveRecord: 0.0ms)
 
 
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at C:/Users/etien/Desktop/Workshops/Back/config/environment.rb:5)
+Started GET "/music_styles" for ::1 at 2016-10-28 22:21:59 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MusicStylesController#index as HTML
+Started GET "/music_styles" for ::1 at 2016-10-28 22:22:00 +0200
+Processing by MusicStylesController#index as HTML
+  Rendering music_styles/index.html.erb within layouts/application
+  Rendering music_styles/index.html.erb within layouts/application
+  [1m[36mMusicStyle Load (1.0ms)[0m  [1m[34mSELECT "music_styles".* FROM "music_styles"[0m
+  [1m[36mMusicStyle Load (1.0ms)[0m  [1m[34mSELECT "music_styles".* FROM "music_styles"[0m
+  Rendered music_styles/index.html.erb within layouts/application (64.0ms)
+  Rendered music_styles/index.html.erb within layouts/application (141.0ms)
+Completed 500 Internal Server Error in 4411ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (can't add a new key into hash during iteration):
+    29:     <!-- Size should be 32 x 32 pixels -->
+    30:     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
+    31: 
+    32:     <%= javascript_include_tag "application" %>
+    33: 
+    34:     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    35:     <!--[if lt IE 9]>
+  
+app/views/layouts/application.html.erb:32:in `_app_views_layouts_application_html_erb___788117710_55367180'
+Completed 200 OK in 4355ms (Views: 4302.5ms | ActiveRecord: 1.0ms)
+
+
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (24.0ms)
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (2052.0ms)
+Started GET "/concerts/search.json?location=Paris" for ::1 at 2016-10-28 22:33:09 +0200
+Processing by ConcertsController#search as JSON
+  Parameters: {"location"=>"Paris"}
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts"[0m
+Redirected to 
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 2.0ms)
+
+
+  
+NoMethodError (undefined method `to_model' for #<Concert::ActiveRecord_Relation:0x0000000f84da78>
+Did you mean?  to_xml):
+  
+app/controllers/concerts_controller.rb:84:in `search'
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1573.0ms)
+Started GET "/concerts/search.json?location=Paris" for ::1 at 2016-10-28 22:38:50 +0200
+Processing by ConcertsController#search as JSON
+  Parameters: {"location"=>"Paris"}
+Redirected to http://localhost:3000/index
+Completed 302 Found in 11ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/index" for ::1 at 2016-10-28 22:38:50 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered collection of C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [54 times] (48.0ms)
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (168.0ms)
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (2139.0ms)
+Started GET "/index" for ::1 at 2016-10-28 22:39:15 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered collection of C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [54 times] (30.0ms)
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (2254.0ms)
+Started GET "/concerts/search.json?location=Paris" for ::1 at 2016-10-28 22:39:23 +0200
+Processing by ConcertsController#search as JSON
+  Parameters: {"location"=>"Paris"}
+Redirected to http://localhost:3000/concerts
+Completed 302 Found in 11ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/concerts" for ::1 at 2016-10-28 22:39:24 +0200
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts"[0m
+  Rendered concerts/index.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 809ms (Views: 784.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/concerts/search.json?location=Paris" for ::1 at 2016-10-28 22:39:31 +0200
+Processing by ConcertsController#search as JSON
+  Parameters: {"location"=>"Paris"}
+Redirected to http://localhost:3000/concerts
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/concerts" for ::1 at 2016-10-28 22:39:31 +0200
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts"[0m
+  Rendered concerts/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 1176ms (Views: 1146.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/concerts/search.json?location=Paris" for ::1 at 2016-10-28 22:39:45 +0200
+Processing by ConcertsController#search as JSON
+  Parameters: {"location"=>"Paris"}
+Redirected to http://localhost:3000/concerts
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/concerts" for ::1 at 2016-10-28 22:39:46 +0200
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts"[0m
+  Rendered concerts/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 494ms (Views: 460.8ms | ActiveRecord: 1.0ms)
+
+
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at c:/Users/etien/Desktop/Workshops/Back/config/environment.rb:5)
+Started GET "/music_styles" for ::1 at 2016-11-03 10:05:10 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MusicStylesController#index as HTML
+  Rendering music_styles/index.html.erb within layouts/application
+  [1m[36mMusicStyle Load (0.0ms)[0m  [1m[34mSELECT "music_styles".* FROM "music_styles"[0m
+  Rendered music_styles/index.html.erb within layouts/application (362.9ms)
+Completed 200 OK in 3285ms (Views: 3235.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/music_styles/new" for ::1 at 2016-11-03 10:05:52 +0100
+Processing by MusicStylesController#new as HTML
+  Rendering music_styles/new.html.erb within layouts/application
+  Rendered music_styles/_form.html.erb (184.9ms)
+  Rendered music_styles/new.html.erb within layouts/application (300.9ms)
+Completed 200 OK in 1265ms (Views: 1235.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/music_styles" for ::1 at 2016-11-03 10:06:42 +0100
+Processing by MusicStylesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q92Ht29BvhjprWwMErj9KGnRJXEMzVcIZaixARkv1O8rTRGvKYomL3PXTnGadY9WUiZLajVx0uWWSeiI7pOIQQ==", "music_style"=>{"name"=>"Rock", "description"=>"Le rock est un genre musical apparu dans les années 1950 aux États-Unis et qui s'est développé en différents sous-genres à partir des années 1960, particulièrement aux États-Unis et au Royaume-Uni1,2."}, "commit"=>"Create Music style"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "music_styles" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Rock"], ["description", "Le rock est un genre musical apparu dans les années 1950 aux États-Unis et qui s'est développé en différents sous-genres à partir des années 1960, particulièrement aux États-Unis et au Royaume-Uni1,2."], ["created_at", 2016-11-03 09:06:42 UTC], ["updated_at", 2016-11-03 09:06:42 UTC]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/music_styles/2
+Completed 302 Found in 301ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/music_styles/2" for ::1 at 2016-11-03 10:06:42 +0100
+Processing by MusicStylesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMusicStyle Load (0.0ms)[0m  [1m[34mSELECT  "music_styles".* FROM "music_styles" WHERE "music_styles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering music_styles/show.html.erb within layouts/application
+  Rendered music_styles/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 554ms (Views: 412.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/music_styles" for ::1 at 2016-11-03 10:06:47 +0100
+Processing by MusicStylesController#index as HTML
+  Rendering music_styles/index.html.erb within layouts/application
+  [1m[36mMusicStyle Load (0.0ms)[0m  [1m[34mSELECT "music_styles".* FROM "music_styles"[0m
+  Rendered music_styles/index.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 438ms (Views: 419.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/music_styles/new" for ::1 at 2016-11-03 10:06:53 +0100
+Processing by MusicStylesController#new as HTML
+  Rendering music_styles/new.html.erb within layouts/application
+  Rendered music_styles/_form.html.erb (0.0ms)
+  Rendered music_styles/new.html.erb within layouts/application (31.3ms)
+Completed 200 OK in 686ms (Views: 551.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/music_styles" for ::1 at 2016-11-03 10:07:02 +0100
+Processing by MusicStylesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F3r3YFBZsQqmfkX/KuztT0JZafBHwy45sg3ToNwqBUp/6mF4FpIpPTwEZ4KiIZ8xea4H635/q9RB7IopK5ZZ5A==", "music_style"=>{"name"=>"Jazz", "description"=>"Le jazz est un genre musical originaire du Sud des États-Unis, créé à la fin du xixe siècle et au début du xxe siècle au sein des communautés afro-américaines."}, "commit"=>"Create Music style"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "music_styles" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Jazz"], ["description", "Le jazz est un genre musical originaire du Sud des États-Unis, créé à la fin du xixe siècle et au début du xxe siècle au sein des communautés afro-américaines."], ["created_at", 2016-11-03 09:07:02 UTC], ["updated_at", 2016-11-03 09:07:02 UTC]]
+  [1m[35m (31.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/music_styles/3
+Completed 302 Found in 47ms (ActiveRecord: 31.2ms)
+
+
+Started GET "/music_styles/3" for ::1 at 2016-11-03 10:07:02 +0100
+Processing by MusicStylesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMusicStyle Load (0.0ms)[0m  [1m[34mSELECT  "music_styles".* FROM "music_styles" WHERE "music_styles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering music_styles/show.html.erb within layouts/application
+  Rendered music_styles/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1150ms (Views: 1118.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/music_styles" for ::1 at 2016-11-03 10:07:41 +0100
+Processing by MusicStylesController#index as HTML
+  Rendering music_styles/index.html.erb within layouts/application
+  [1m[36mMusicStyle Load (0.0ms)[0m  [1m[34mSELECT "music_styles".* FROM "music_styles"[0m
+  Rendered music_styles/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 422ms (Views: 377.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/music_styles/search?name=Jazz" for ::1 at 2016-11-03 10:07:57 +0100
+Processing by MusicStylesController#show as HTML
+  Parameters: {"name"=>"Jazz", "id"=>"search"}
+  [1m[36mMusicStyle Load (0.0ms)[0m  [1m[34mSELECT  "music_styles".* FROM "music_styles" WHERE "music_styles"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find MusicStyle with 'id'=search):
+  
+app/controllers/music_styles_controller.rb:71:in `set_music_style'
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1652.7ms)
+Started GET "/music_styles/search.json?name=Jazz" for ::1 at 2016-11-03 10:08:14 +0100
+Processing by MusicStylesController#show as JSON
+  Parameters: {"name"=>"Jazz", "id"=>"search"}
+  [1m[36mMusicStyle Load (0.0ms)[0m  [1m[34mSELECT  "music_styles".* FROM "music_styles" WHERE "music_styles"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 53ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find MusicStyle with 'id'=search):
+  
+app/controllers/music_styles_controller.rb:71:in `set_music_style'
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1544.2ms)
+Started GET "/music_styles/search.json?name=Jazz" for ::1 at 2016-11-03 10:08:45 +0100
+Processing by MusicStylesController#search as JSON
+  Parameters: {"name"=>"Jazz"}
+  [1m[36mMusicStyle Load (0.0ms)[0m  [1m[34mSELECT "music_styles".* FROM "music_styles" WHERE "music_styles"."name" = ?[0m  [["name", "Jazz"]]
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `id' for #<MusicStyle::ActiveRecord_Relation:0x0000000d867e20>
+Did you mean?  ids):
+  
+app/controllers/music_styles_controller.rb:65:in `search'
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1628.1ms)
+Started GET "/music_styles/search.json?name=Jazz" for ::1 at 2016-11-03 10:11:41 +0100
+Processing by MusicStylesController#search as JSON
+  Parameters: {"name"=>"Jazz"}
+  [1m[36mMusicStyle Load (15.6ms)[0m  [1m[34mSELECT  "music_styles".* FROM "music_styles" WHERE "music_styles"."name" = ? ORDER BY "music_styles"."id" ASC LIMIT ?[0m  [["name", "Jazz"], ["LIMIT", 1]]
+  Rendering music_styles/search.json.jbuilder
+  Rendered music_styles/search.json.jbuilder (22.1ms)
+Completed 200 OK in 201ms (Views: 163.7ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/music_styles" for ::1 at 2016-11-03 10:12:40 +0100
+Processing by MusicStylesController#index as HTML
+  Rendering music_styles/index.html.erb within layouts/application
+  [1m[36mMusicStyle Load (0.0ms)[0m  [1m[34mSELECT "music_styles".* FROM "music_styles"[0m
+  Rendered music_styles/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 501ms (Views: 464.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/music_styles/search/Jazz" for ::1 at 2016-11-03 10:14:51 +0100
+Processing by MusicStylesController#search as HTML
+  Parameters: {"name"=>"Jazz"}
+  [1m[36mMusicStyle Load (0.0ms)[0m  [1m[34mSELECT  "music_styles".* FROM "music_styles" WHERE "music_styles"."name" = ? ORDER BY "music_styles"."id" ASC LIMIT ?[0m  [["name", "Jazz"], ["LIMIT", 1]]
+  Rendering music_styles/search.html.erb within layouts/application
+  Rendered music_styles/search.html.erb within layouts/application (215.3ms)
+Completed 500 Internal Server Error in 331ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `style_id' for #<#<Class:0x00000006645fb8>:0x00000006614ad0>
+Did you mean?  @style_id):
+    2: <div class="page-header">
+    3:   <h1>Music style_id search</h1>
+    4: </div>
+    5: <%= style_id %>
+  
+app/views/music_styles/search.html.erb:5:in `_app_views_music_styles_search_html_erb___2099442988_53655100'
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1519.1ms)
+Started GET "/music_styles/search/Jazz" for ::1 at 2016-11-03 10:15:19 +0100
+Processing by MusicStylesController#search as HTML
+  Parameters: {"name"=>"Jazz"}
+  [1m[36mMusicStyle Load (15.6ms)[0m  [1m[34mSELECT  "music_styles".* FROM "music_styles" WHERE "music_styles"."name" = ? ORDER BY "music_styles"."id" ASC LIMIT ?[0m  [["name", "Jazz"], ["LIMIT", 1]]
+  Rendering music_styles/search.html.erb within layouts/application
+  Rendered music_styles/search.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 369ms (Views: 327.8ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/music_styles/search?name=Jazz" for ::1 at 2016-11-03 10:16:20 +0100
+Processing by MusicStylesController#show as HTML
+  Parameters: {"name"=>"Jazz", "id"=>"search"}
+  [1m[36mMusicStyle Load (0.0ms)[0m  [1m[34mSELECT  "music_styles".* FROM "music_styles" WHERE "music_styles"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find MusicStyle with 'id'=search):
+  
+app/controllers/music_styles_controller.rb:71:in `set_music_style'
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (15.6ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1608.1ms)
+Started GET "/music_styles/search.json?name=Jazz" for ::1 at 2016-11-03 10:16:27 +0100
+Processing by MusicStylesController#search as JSON
+  Parameters: {"name"=>"Jazz"}
+  [1m[36mMusicStyle Load (0.0ms)[0m  [1m[34mSELECT  "music_styles".* FROM "music_styles" WHERE "music_styles"."name" = ? ORDER BY "music_styles"."id" ASC LIMIT ?[0m  [["name", "Jazz"], ["LIMIT", 1]]
+  Rendering music_styles/search.json.jbuilder
+  Rendered music_styles/search.json.jbuilder (0.0ms)
+Completed 200 OK in 347ms (Views: 221.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/music_styles/search.json?name=Jazz" for ::1 at 2016-11-03 10:17:35 +0100
+Processing by MusicStylesController#search as JSON
+  Parameters: {"name"=>"Jazz"}
+  Rendering music_styles/search.json.jbuilder
+  [1m[36mMusicStyle Load (0.0ms)[0m  [1m[34mSELECT "music_styles".* FROM "music_styles" WHERE "music_styles"."name" = ?[0m  [["name", "Jazz"]]
+  Rendered music_styles/_music_style.json.jbuilder (0.0ms)
+  Rendered music_styles/search.json.jbuilder (15.6ms)
+Completed 200 OK in 185ms (Views: 156.2ms | ActiveRecord: 0.5ms)
+
+
