@@ -1,7 +1,5 @@
 class ConcertsController < ApplicationController
   before_action :set_concert, only: [:show, :edit, :update, :destroy, :reservation]
-  before_action  :set_music_style, only: [:show, :edit, :update, :destroy]
-	before_action :set_concert_preference, only: [:show, :edit, :update, :destroy]
 
 
   skip_before_action :verify_authenticity_token, only: [:reservation]
@@ -15,6 +13,7 @@ class ConcertsController < ApplicationController
   # GET /concerts/1
   # GET /concerts/1.json
   def show
+     @concerts = Concert.find(params[:id])
   end
 
   # GET /concerts/new

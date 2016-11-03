@@ -13,7 +13,8 @@ Rails.application.routes.draw do
 
   get 'home/index'
   root 'home#index'
-  post 'concerts/:id/reservation' => 'concerts#reservation'
+
+  get 'concerts/:id' => 'concerts#show'
 
   get 'concerts/search/:music_style' => 'concerts#search'
 
