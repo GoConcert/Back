@@ -1,5 +1,8 @@
 class ConcertsController < ApplicationController
   before_action :set_concert, only: [:show, :edit, :update, :destroy, :reservation]
+  before_action  :set_music_style, only: [:show, :edit, :update, :destroy]
+	before_action :set_concert_preference, only: [:show, :edit, :update, :destroy]
+
 
   skip_before_action :verify_authenticity_token, only: [:reservation]
 
@@ -80,7 +83,21 @@ class ConcertsController < ApplicationController
   end
 
   def search
-	@concerts=Concert.where(location: params[:location])
+	if params[:location] 
+	then @concerts=Concert.where(location: params[:location]) 
+	end
+
+	if  params[:music_style]
+	then
+	music_styles=MusicStyle.where(name: params[:music_style])
+	style_id=music_styles.first.id
+	concert_preferences=ConcertPreference.where(style_id: style_id)
+	@concerts=[]
+	concert_preferences.each do |concert_preference|
+	concert_id=concert_preference.id
+	@concerts << Concert.where(id: concert_id)
+	end
+	end
   end
 
   private

@@ -61,6 +61,10 @@ class ConcertPreferencesController < ApplicationController
     end
   end
 
+  def search
+	@concert_preferences=ConcertPreference.where(style_id: params[:style_id])
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_concert_preference

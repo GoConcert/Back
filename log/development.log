@@ -4600,3 +4600,842 @@ Processing by MusicStylesController#search as JSON
 Completed 200 OK in 185ms (Views: 156.2ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/concert_preferences" for ::1 at 2016-11-03 10:35:22 +0100
+Processing by ConcertPreferencesController#index as HTML
+  Rendering concert_preferences/index.html.erb within layouts/application
+  [1m[36mConcertPreference Load (0.0ms)[0m  [1m[34mSELECT "concert_preferences".* FROM "concert_preferences"[0m
+  Rendered concert_preferences/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 423ms (Views: 398.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/concert_preferences/new" for ::1 at 2016-11-03 10:35:56 +0100
+Processing by ConcertPreferencesController#new as HTML
+  Rendering concert_preferences/new.html.erb within layouts/application
+  Rendered concert_preferences/_form.html.erb (3.0ms)
+  Rendered concert_preferences/new.html.erb within layouts/application (68.6ms)
+Completed 200 OK in 517ms (Views: 468.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/concert_preferences" for ::1 at 2016-11-03 10:36:02 +0100
+Processing by ConcertPreferencesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5oWQPJHXPHxB7dN59R0Ua8pPgJAdCSHxurTIJChFwoDFQ0rNvNJ2+rqyGspzK6Njejx1LYnxtviOWLDThdcz0Q==", "concert_preference"=>{"concert_id"=>"1", "style_id"=>"1", "order"=>"1"}, "commit"=>"Create Concert preference"}
+  [1m[35m (15.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "concert_preferences" ("concert_id", "style_id", "order", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["concert_id", 1], ["style_id", 1], ["order", 1], ["created_at", 2016-11-03 09:36:02 UTC], ["updated_at", 2016-11-03 09:36:02 UTC]]
+  [1m[35m (34.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/concert_preferences/1
+Completed 302 Found in 53ms (ActiveRecord: 49.9ms)
+
+
+Started GET "/concert_preferences/1" for ::1 at 2016-11-03 10:36:02 +0100
+Processing by ConcertPreferencesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcertPreference Load (0.0ms)[0m  [1m[34mSELECT  "concert_preferences".* FROM "concert_preferences" WHERE "concert_preferences"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering concert_preferences/show.html.erb within layouts/application
+  Rendered concert_preferences/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 1389ms (Views: 1317.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/concert_preferences" for ::1 at 2016-11-03 10:36:06 +0100
+Processing by ConcertPreferencesController#index as HTML
+  Rendering concert_preferences/index.html.erb within layouts/application
+  [1m[36mConcertPreference Load (0.0ms)[0m  [1m[34mSELECT "concert_preferences".* FROM "concert_preferences"[0m
+  Rendered concert_preferences/index.html.erb within layouts/application (64.1ms)
+Completed 200 OK in 864ms (Views: 728.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/concert_preferences/new" for ::1 at 2016-11-03 10:36:08 +0100
+Processing by ConcertPreferencesController#new as HTML
+  Rendering concert_preferences/new.html.erb within layouts/application
+  Rendered concert_preferences/_form.html.erb (5.5ms)
+  Rendered concert_preferences/new.html.erb within layouts/application (200.3ms)
+Completed 200 OK in 1126ms (Views: 1029.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/concert_preferences" for ::1 at 2016-11-03 10:36:13 +0100
+Processing by ConcertPreferencesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IOulqtbRmiyAgXt9V0XgLkfPmThOWN30YySUoSgWPv8DLX9b+9TQqnvess7Rc1cm97xshdqgSv1XyOxWhYTPrg==", "concert_preference"=>{"concert_id"=>"1", "style_id"=>"3", "order"=>"2"}, "commit"=>"Create Concert preference"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "concert_preferences" ("concert_id", "style_id", "order", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["concert_id", 1], ["style_id", 3], ["order", 2], ["created_at", 2016-11-03 09:36:13 UTC], ["updated_at", 2016-11-03 09:36:13 UTC]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/concert_preferences/2
+Completed 302 Found in 31ms (ActiveRecord: 15.6ms)
+
+
+Started GET "/concert_preferences/2" for ::1 at 2016-11-03 10:36:13 +0100
+Processing by ConcertPreferencesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mConcertPreference Load (0.0ms)[0m  [1m[34mSELECT  "concert_preferences".* FROM "concert_preferences" WHERE "concert_preferences"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering concert_preferences/show.html.erb within layouts/application
+  Rendered concert_preferences/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1102ms (Views: 1069.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/concert_preferences" for ::1 at 2016-11-03 10:36:16 +0100
+Processing by ConcertPreferencesController#index as HTML
+  Rendering concert_preferences/index.html.erb within layouts/application
+  [1m[36mConcertPreference Load (0.0ms)[0m  [1m[34mSELECT "concert_preferences".* FROM "concert_preferences"[0m
+  Rendered concert_preferences/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 338ms (Views: 309.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/concert_preferences/new" for ::1 at 2016-11-03 10:36:18 +0100
+Processing by ConcertPreferencesController#new as HTML
+  Rendering concert_preferences/new.html.erb within layouts/application
+  Rendered concert_preferences/_form.html.erb (4.5ms)
+  Rendered concert_preferences/new.html.erb within layouts/application (37.8ms)
+Completed 200 OK in 369ms (Views: 340.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/concert_preferences" for ::1 at 2016-11-03 10:36:22 +0100
+Processing by ConcertPreferencesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CG0OdzygPqInuuiN2KSHpcmnve4ofdzrsb6ZUwN5EKgrq9SGEaV0JNzlIT5ekjCtedRIU7yFS+KFUuGkruvh+Q==", "concert_preference"=>{"concert_id"=>"2", "style_id"=>"2", "order"=>"1"}, "commit"=>"Create Concert preference"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "concert_preferences" ("concert_id", "style_id", "order", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["concert_id", 2], ["style_id", 2], ["order", 1], ["created_at", 2016-11-03 09:36:22 UTC], ["updated_at", 2016-11-03 09:36:22 UTC]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/concert_preferences/3
+Completed 302 Found in 47ms (ActiveRecord: 15.6ms)
+
+
+Started GET "/concert_preferences/3" for ::1 at 2016-11-03 10:36:23 +0100
+Processing by ConcertPreferencesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mConcertPreference Load (0.0ms)[0m  [1m[34mSELECT  "concert_preferences".* FROM "concert_preferences" WHERE "concert_preferences"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering concert_preferences/show.html.erb within layouts/application
+  Rendered concert_preferences/show.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 401ms (Views: 381.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/concert_preferences" for ::1 at 2016-11-03 10:36:25 +0100
+Processing by ConcertPreferencesController#index as HTML
+  Rendering concert_preferences/index.html.erb within layouts/application
+  [1m[36mConcertPreference Load (0.0ms)[0m  [1m[34mSELECT "concert_preferences".* FROM "concert_preferences"[0m
+  Rendered concert_preferences/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 1132ms (Views: 1109.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/concert_preferences/new" for ::1 at 2016-11-03 10:36:27 +0100
+Processing by ConcertPreferencesController#new as HTML
+  Rendering concert_preferences/new.html.erb within layouts/application
+  Rendered concert_preferences/_form.html.erb (0.0ms)
+  Rendered concert_preferences/new.html.erb within layouts/application (147.2ms)
+Completed 200 OK in 1090ms (Views: 1060.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/concert_preferences" for ::1 at 2016-11-03 10:36:33 +0100
+Processing by ConcertPreferencesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ncl8zwPpO0hc7o8tcSTUSHIGJBUirbK10EFVOTVejoi+D6Y+LuxxzqexRp73EmNAwnXRqLZVJbzkrS3OmMx/2Q==", "concert_preference"=>{"concert_id"=>"3", "style_id"=>"2", "order"=>"1"}, "commit"=>"Create Concert preference"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "concert_preferences" ("concert_id", "style_id", "order", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["concert_id", 3], ["style_id", 2], ["order", 1], ["created_at", 2016-11-03 09:36:33 UTC], ["updated_at", 2016-11-03 09:36:33 UTC]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/concert_preferences/4
+Completed 302 Found in 31ms (ActiveRecord: 15.6ms)
+
+
+Started GET "/concert_preferences/4" for ::1 at 2016-11-03 10:36:33 +0100
+Processing by ConcertPreferencesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mConcertPreference Load (0.0ms)[0m  [1m[34mSELECT  "concert_preferences".* FROM "concert_preferences" WHERE "concert_preferences"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering concert_preferences/show.html.erb within layouts/application
+  Rendered concert_preferences/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 485ms (Views: 396.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/concert_preferences" for ::1 at 2016-11-03 10:36:36 +0100
+Processing by ConcertPreferencesController#index as HTML
+  Rendering concert_preferences/index.html.erb within layouts/application
+  [1m[36mConcertPreference Load (0.0ms)[0m  [1m[34mSELECT "concert_preferences".* FROM "concert_preferences"[0m
+  Rendered concert_preferences/index.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 1118ms (Views: 1044.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/concert_preferences/new" for ::1 at 2016-11-03 10:36:39 +0100
+Processing by ConcertPreferencesController#new as HTML
+  Rendering concert_preferences/new.html.erb within layouts/application
+  Rendered concert_preferences/_form.html.erb (0.0ms)
+  Rendered concert_preferences/new.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 764ms (Views: 689.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/concert_preferences" for ::1 at 2016-11-03 10:36:46 +0100
+Processing by ConcertPreferencesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cHMMCIexGu/2mp+2hTWJHlAAY7nvBLDc/qyR8A759jRTtdb5qrRQaQ3FVgUDAz4W4HOWBHv8J9XKQOkHo2sHZQ==", "concert_preference"=>{"concert_id"=>"3", "style_id"=>"3", "order"=>"2"}, "commit"=>"Create Concert preference"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "concert_preferences" ("concert_id", "style_id", "order", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["concert_id", 3], ["style_id", 3], ["order", 2], ["created_at", 2016-11-03 09:36:46 UTC], ["updated_at", 2016-11-03 09:36:46 UTC]]
+  [1m[35m (22.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/concert_preferences/5
+Completed 302 Found in 38ms (ActiveRecord: 22.1ms)
+
+
+Started GET "/concert_preferences/5" for ::1 at 2016-11-03 10:36:47 +0100
+Processing by ConcertPreferencesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mConcertPreference Load (0.0ms)[0m  [1m[34mSELECT  "concert_preferences".* FROM "concert_preferences" WHERE "concert_preferences"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering concert_preferences/show.html.erb within layouts/application
+  Rendered concert_preferences/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 802ms (Views: 770.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/concert_preferences" for ::1 at 2016-11-03 10:36:51 +0100
+Processing by ConcertPreferencesController#index as HTML
+  Rendering concert_preferences/index.html.erb within layouts/application
+  [1m[36mConcertPreference Load (0.0ms)[0m  [1m[34mSELECT "concert_preferences".* FROM "concert_preferences"[0m
+  Rendered concert_preferences/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 1404ms (Views: 1316.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/concert_preferences/search.json?style_id=2" for ::1 at 2016-11-03 10:37:20 +0100
+Processing by ConcertPreferencesController#search as JSON
+  Parameters: {"style_id"=>"2"}
+  Rendering concert_preferences/search.json.jbuilder
+  [1m[36mConcertPreference Load (0.0ms)[0m  [1m[34mSELECT "concert_preferences".* FROM "concert_preferences" WHERE "concert_preferences"."style_id" = ?[0m  [["style_id", 2]]
+  Rendered concert_preferences/_concert_preference.json.jbuilder (0.0ms)
+  Rendered concert_preferences/_concert_preference.json.jbuilder (0.0ms)
+  Rendered concert_preferences/search.json.jbuilder (31.3ms)
+Completed 200 OK in 200ms (Views: 170.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/concerts/search.json?location=Paris" for ::1 at 2016-11-03 10:41:28 +0100
+  
+SyntaxError (c:/Users/etien/Desktop/Workshops/Back/app/controllers/concerts_controller.rb:83: syntax error, unexpected tIVAR, expecting keyword_then or ';' or '\n'
+	if params[:location] @var=1
+	                         ^):
+  
+app/controllers/concerts_controller.rb:83: syntax error, unexpected tIVAR, expecting keyword_then or ';' or '\n'
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1424.0ms)
+Started GET "/concerts/search.json?location=Paris" for ::1 at 2016-11-03 10:44:03 +0100
+  
+SyntaxError (c:/Users/etien/Desktop/Workshops/Back/app/controllers/concerts_controller.rb:83: syntax error, unexpected tIVAR, expecting keyword_then or ';' or '\n'
+	if params[:location] @var=1 end
+	                         ^
+c:/Users/etien/Desktop/Workshops/Back/app/controllers/concerts_controller.rb:103: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/concerts_controller.rb:83: syntax error, unexpected tIVAR, expecting keyword_then or ';' or '\n'
+app/controllers/concerts_controller.rb:103: syntax error, unexpected keyword_end, expecting end-of-input
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.5ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1482.3ms)
+Started GET "/concerts/search.json?location=Paris" for ::1 at 2016-11-03 10:44:21 +0100
+  
+SyntaxError (c:/Users/etien/Desktop/Workshops/Back/app/controllers/concerts_controller.rb:83: syntax error, unexpected tIVAR, expecting keyword_do or '{' or '('
+	if params[:location]!=null @var=1 end
+	                               ^
+c:/Users/etien/Desktop/Workshops/Back/app/controllers/concerts_controller.rb:103: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/concerts_controller.rb:83: syntax error, unexpected tIVAR, expecting keyword_do or '{' or '('
+app/controllers/concerts_controller.rb:103: syntax error, unexpected keyword_end, expecting end-of-input
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1472.8ms)
+Started GET "/concerts/search.json?location=Paris" for ::1 at 2016-11-03 10:45:33 +0100
+  
+SyntaxError (c:/Users/etien/Desktop/Workshops/Back/app/controllers/concerts_controller.rb:83: syntax error, unexpected tIVAR, expecting keyword_then or ';' or '\n'
+	if params[:location]!=nil @var=1 end
+	                              ^
+c:/Users/etien/Desktop/Workshops/Back/app/controllers/concerts_controller.rb:103: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/concerts_controller.rb:83: syntax error, unexpected tIVAR, expecting keyword_then or ';' or '\n'
+app/controllers/concerts_controller.rb:103: syntax error, unexpected keyword_end, expecting end-of-input
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1452.0ms)
+Started GET "/concerts/search.json?location=Paris" for ::1 at 2016-11-03 10:46:18 +0100
+  
+SyntaxError (c:/Users/etien/Desktop/Workshops/Back/app/controllers/concerts_controller.rb:83: syntax error, unexpected ':', expecting keyword_end
+  location: params[:location]
+           ^):
+  
+app/controllers/concerts_controller.rb:83: syntax error, unexpected ':', expecting keyword_end
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1507.1ms)
+Started GET "/concerts/search.json?location=Paris" for ::1 at 2016-11-03 10:46:47 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"location"=>"Paris"}
+  Rendering concerts/search.json.jbuilder
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."location" = ?[0m  [["location", "Paris"]]
+  Rendered concerts/_concert.json.jbuilder (0.0ms)
+  Rendered concerts/_concert.json.jbuilder (0.0ms)
+  Rendered concerts/search.json.jbuilder (31.2ms)
+Completed 200 OK in 216ms (Views: 170.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/concerts/search/Paris" for ::1 at 2016-11-03 10:47:11 +0100
+Processing by ConcertsController#search as HTML
+  Parameters: {"location"=>"Paris"}
+  Rendering concerts/search.html.erb within layouts/application
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."location" = ? ORDER BY "concerts"."id" ASC LIMIT ?[0m  [["location", "Paris"], ["LIMIT", 1]]
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."location" = ?[0m  [["location", "Paris"]]
+  Rendered concerts/search.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 432ms (Views: 399.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/concerts/search/Jazz" for ::1 at 2016-11-03 10:50:12 +0100
+Processing by ConcertsController#search as HTML
+  Parameters: {"location"=>"Jazz"}
+  Rendering concerts/search.html.erb within layouts/application
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."location" = ? ORDER BY "concerts"."id" ASC LIMIT ?[0m  [["location", "Jazz"], ["LIMIT", 1]]
+  Rendered concerts/search.html.erb within layouts/application (84.7ms)
+Completed 500 Internal Server Error in 532ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `location' for nil:NilClass):
+    1: <%- model_class = Concert -%>
+    2:   <div class="page-header">
+    3:     <h1>
+    4:       Concert(s) à <%= @concerts.first.location %>
+    5:   </h1>
+    6:   </div>
+    7:   <table class="table table-striped">
+  
+app/views/concerts/search.html.erb:4:in `_app_views_concerts_search_html_erb__671838948_109579060'
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.5ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1521.4ms)
+Started GET "/concerts/search/Jazz" for ::1 at 2016-11-03 10:51:18 +0100
+Processing by ConcertsController#search as HTML
+  Parameters: {"location"=>"Jazz"}
+  Rendering concerts/search.html.erb within layouts/application
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."location" = ? ORDER BY "concerts"."id" ASC LIMIT ?[0m  [["location", "Jazz"], ["LIMIT", 1]]
+  Rendered concerts/search.html.erb within layouts/application (15.6ms)
+Completed 500 Internal Server Error in 137ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `location' for nil:NilClass):
+    1: <%- model_class = Concert -%>
+    2:   <div class="page-header">
+    3:     <h1>
+    4:       Concert(s) à <%= @concerts.first.location %>
+    5:   </h1>
+    6:   </div>
+    7:   <table class="table table-striped">
+  
+app/views/concerts/search.html.erb:4:in `_app_views_concerts_search_html_erb__671838948_115695380'
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1737.8ms)
+Started GET "/concerts/search.json?music_style=Jazz" for ::1 at 2016-11-03 10:52:09 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"music_style"=>"Jazz"}
+Completed 500 Internal Server Error in 131ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `concert_preferences' for #<ConcertsController:0x0000000d8df0d8>
+Did you mean?  concert_preferences_url
+               concert_preferences_path
+               concert_preference_url
+               concert_preference_path):
+  
+app/controllers/concerts_controller.rb:84:in `search'
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (37.3ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1802.0ms)
+Started GET "/concerts/search.json?music_style=Jazz" for ::1 at 2016-11-03 10:56:41 +0100
+  
+SyntaxError (c:/Users/etien/Desktop/Workshops/Back/app/controllers/concerts_controller.rb:86: syntax error, unexpected keyword_then, expecting keyword_end
+	params[:music_style] then @concerts=Concert.where(id: ...
+	                         ^):
+  
+app/controllers/concerts_controller.rb:86: syntax error, unexpected keyword_then, expecting keyword_end
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1426.0ms)
+Started GET "/concerts/search.json?music_style=Jazz" for ::1 at 2016-11-03 10:57:15 +0100
+  
+SyntaxError (c:/Users/etien/Desktop/Workshops/Back/app/controllers/concerts_controller.rb:89: syntax error, unexpected keyword_then, expecting keyword_end
+	params[:music_style] then @concerts=Concert.where(id: ...
+	                         ^):
+  
+app/controllers/concerts_controller.rb:89: syntax error, unexpected keyword_then, expecting keyword_end
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1649.6ms)
+Started GET "/concerts/search.json?music_style=Jazz" for ::1 at 2016-11-03 10:57:31 +0100
+  
+SyntaxError (c:/Users/etien/Desktop/Workshops/Back/app/controllers/concerts_controller.rb:89: syntax error, unexpected keyword_then, expecting keyword_end
+	params[:music_style] then @concerts=Concert.where(id: ...
+	                         ^):
+  
+app/controllers/concerts_controller.rb:89: syntax error, unexpected keyword_then, expecting keyword_end
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1432.2ms)
+Started GET "/concerts/search.json?music_style=Jazz" for ::1 at 2016-11-03 10:58:10 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"music_style"=>"Jazz"}
+  [1m[36mConcertPreference Load (0.0ms)[0m  [1m[34mSELECT  "concert_preferences".* FROM "concert_preferences" WHERE "concert_preferences"."style_id" IS NULL AND "concert_preferences"."music_style" = ? ORDER BY "concert_preferences"."id" ASC LIMIT ?[0m  [["music_style", "Jazz"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 2.0ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: concert_preferences.music_style: SELECT  "concert_preferences".* FROM "concert_preferences" WHERE "concert_preferences"."style_id" IS NULL AND "concert_preferences"."music_style" = ? ORDER BY "concert_preferences"."id" ASC LIMIT ?):
+  
+app/controllers/concerts_controller.rb:90:in `search'
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1554.3ms)
+Started GET "/concerts/search.json?music_style=Jazz" for ::1 at 2016-11-03 11:02:51 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"music_style"=>"Jazz"}
+Completed 500 Internal Server Error in 134ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `music_style' for #<ConcertsController:0x0000000d72d7f8>
+Did you mean?  music_styles):
+  
+app/controllers/concerts_controller.rb:90:in `search'
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.6ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1447.0ms)
+Started GET "/concerts/search.json?music_style=Jazz" for ::1 at 2016-11-03 11:03:17 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"music_style"=>"Jazz"}
+  [1m[36mMusicStyle Load (0.0ms)[0m  [1m[34mSELECT  "music_styles".* FROM "music_styles" WHERE "music_styles"."name" IS NULL ORDER BY "music_styles"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/concerts_controller.rb:90:in `search'
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1722.5ms)
+Started GET "/concerts/search.json?music_style=Jazz" for ::1 at 2016-11-03 11:04:37 +0100
+  
+SyntaxError (c:/Users/etien/Desktop/Workshops/Back/app/controllers/concerts_controller.rb:3: syntax error, unexpected ',', expecting keyword_end
+    :set_music_style, only: [:show, :edit, :update, :destroy]
+                     ^
+c:/Users/etien/Desktop/Workshops/Back/app/controllers/concerts_controller.rb:4: syntax error, unexpected ',', expecting keyword_end
+	:set_concert_preference, only: [:show, :edit, :update, :destroy]
+	                        ^):
+  
+app/controllers/concerts_controller.rb:3: syntax error, unexpected ',', expecting keyword_end
+app/controllers/concerts_controller.rb:4: syntax error, unexpected ',', expecting keyword_end
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1601.1ms)
+Started GET "/concerts/search.json?music_style=Jazz" for ::1 at 2016-11-03 11:05:13 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"music_style"=>"Jazz"}
+  [1m[36mMusicStyle Load (0.0ms)[0m  [1m[34mSELECT  "music_styles".* FROM "music_styles" WHERE "music_styles"."name" IS NULL ORDER BY "music_styles"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/concerts_controller.rb:93:in `search'
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1467.5ms)
+Started GET "/concerts/search.json?music_style=Jazz" for ::1 at 2016-11-03 11:06:15 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"music_style"=>"Jazz"}
+  [1m[36mMusicStyle Load (0.0ms)[0m  [1m[34mSELECT  "music_styles".* FROM "music_styles" WHERE "music_styles"."music_style" = ? ORDER BY "music_styles"."id" ASC LIMIT ?[0m  [["music_style", "Jazz"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 138ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: music_styles.music_style: SELECT  "music_styles".* FROM "music_styles" WHERE "music_styles"."music_style" = ? ORDER BY "music_styles"."id" ASC LIMIT ?):
+  
+app/controllers/concerts_controller.rb:93:in `search'
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (17.7ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1570.4ms)
+Started GET "/concerts/search.json?music_style=Jazz" for ::1 at 2016-11-03 11:07:12 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"music_style"=>"Jazz"}
+  [1m[36mMusicStyle Load (0.0ms)[0m  [1m[34mSELECT  "music_styles".* FROM "music_styles" WHERE "music_styles"."name" = ? ORDER BY "music_styles"."id" ASC LIMIT ?[0m  [["name", "Jazz"], ["LIMIT", 1]]
+  [1m[36mConcertPreference Load (0.0ms)[0m  [1m[34mSELECT  "concert_preferences".* FROM "concert_preferences" WHERE "concert_preferences"."style_id" IS NULL ORDER BY "concert_preferences"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 1.8ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/concerts_controller.rb:95:in `search'
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1751.0ms)
+Started GET "/concerts/search.json?music_style=Jazz" for ::1 at 2016-11-03 11:08:57 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"music_style"=>"Jazz"}
+  [1m[36mMusicStyle Load (0.0ms)[0m  [1m[34mSELECT  "music_styles".* FROM "music_styles" WHERE "music_styles"."name" = ? ORDER BY "music_styles"."id" ASC LIMIT ?[0m  [["name", "Jazz"], ["LIMIT", 1]]
+  [1m[36mConcertPreference Load (15.6ms)[0m  [1m[34mSELECT  "concert_preferences".* FROM "concert_preferences" WHERE "concert_preferences"."style_id" = ? ORDER BY "concert_preferences"."id" ASC LIMIT ?[0m  [["style_id", 3], ["LIMIT", 1]]
+  Rendering concerts/search.json.jbuilder
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."id" = ?[0m  [["id", 2]]
+  Rendered concerts/_concert.json.jbuilder (0.0ms)
+  Rendered concerts/search.json.jbuilder (15.6ms)
+Completed 200 OK in 232ms (Views: 163.8ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/concert_preferences" for ::1 at 2016-11-03 11:09:49 +0100
+Processing by ConcertPreferencesController#index as HTML
+  Rendering concert_preferences/index.html.erb within layouts/application
+  [1m[36mConcertPreference Load (0.0ms)[0m  [1m[34mSELECT "concert_preferences".* FROM "concert_preferences"[0m
+  Rendered concert_preferences/index.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 432ms (Views: 402.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/music_styles" for ::1 at 2016-11-03 11:10:05 +0100
+Processing by MusicStylesController#index as HTML
+  Rendering music_styles/index.html.erb within layouts/application
+  [1m[36mMusicStyle Load (0.0ms)[0m  [1m[34mSELECT "music_styles".* FROM "music_styles"[0m
+  Rendered music_styles/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 485ms (Views: 415.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/concerts/search.json?music_style=Jazz" for ::1 at 2016-11-03 11:13:24 +0100
+  
+SyntaxError (c:/Users/etien/Desktop/Workshops/Back/app/controllers/concerts_controller.rb:98: syntax error, unexpected '\n', expecting &. or :: or '[' or '.'
+c:/Users/etien/Desktop/Workshops/Back/app/controllers/concerts_controller.rb:117: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/concerts_controller.rb:98: syntax error, unexpected '\n', expecting &. or :: or '[' or '.'
+app/controllers/concerts_controller.rb:117: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.5ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1639.7ms)
+Started GET "/concerts/search.json?music_style=Jazz" for ::1 at 2016-11-03 11:15:19 +0100
+  
+SyntaxError (c:/Users/etien/Desktop/Workshops/Back/app/controllers/concerts_controller.rb:117: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/concerts_controller.rb:117: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (15.6ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (31.3ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1800.7ms)
+Started GET "/concerts/search.json?music_style=Jazz" for ::1 at 2016-11-03 11:15:42 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"music_style"=>"Jazz"}
+  [1m[36mMusicStyle Load (0.0ms)[0m  [1m[34mSELECT  "music_styles".* FROM "music_styles" WHERE "music_styles"."name" = ? ORDER BY "music_styles"."id" ASC LIMIT ?[0m  [["name", "Jazz"], ["LIMIT", 1]]
+  [1m[36mConcertPreference Load (0.5ms)[0m  [1m[34mSELECT "concert_preferences".* FROM "concert_preferences" WHERE "concert_preferences"."style_id" = ?[0m  [["style_id", 3]]
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 2.5ms)
+
+
+  
+NoMethodError (undefined method `<<' for nil:NilClass):
+  
+app/controllers/concerts_controller.rb:97:in `block in search'
+app/controllers/concerts_controller.rb:95:in `search'
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1730.8ms)
+Started GET "/concerts/search.json?music_style=Jazz" for ::1 at 2016-11-03 11:16:20 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"music_style"=>"Jazz"}
+  [1m[36mMusicStyle Load (0.0ms)[0m  [1m[34mSELECT  "music_styles".* FROM "music_styles" WHERE "music_styles"."name" = ? ORDER BY "music_styles"."id" ASC LIMIT ?[0m  [["name", "Jazz"], ["LIMIT", 1]]
+  [1m[36mConcertPreference Load (0.0ms)[0m  [1m[34mSELECT "concert_preferences".* FROM "concert_preferences" WHERE "concert_preferences"."style_id" = ?[0m  [["style_id", 3]]
+Completed 500 Internal Server Error in 285ms (ActiveRecord: 15.6ms)
+
+
+  
+NameError (undefined local variable or method `concerts' for #<ConcertsController:0x0000000ce0de98>
+Did you mean?  concerts_url
+               concerts_path
+               concern):
+  
+app/controllers/concerts_controller.rb:98:in `block in search'
+app/controllers/concerts_controller.rb:96:in `search'
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1665.0ms)
+Started GET "/concerts/search.json?music_style=Jazz" for ::1 at 2016-11-03 11:16:51 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"music_style"=>"Jazz"}
+  [1m[36mMusicStyle Load (0.0ms)[0m  [1m[34mSELECT  "music_styles".* FROM "music_styles" WHERE "music_styles"."name" = ? ORDER BY "music_styles"."id" ASC LIMIT ?[0m  [["name", "Jazz"], ["LIMIT", 1]]
+  [1m[36mConcertPreference Load (0.0ms)[0m  [1m[34mSELECT "concert_preferences".* FROM "concert_preferences" WHERE "concert_preferences"."style_id" = ?[0m  [["style_id", 3]]
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `<<' for nil:NilClass):
+  
+app/controllers/concerts_controller.rb:98:in `block in search'
+app/controllers/concerts_controller.rb:96:in `search'
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1855.6ms)
+Started GET "/concerts/search.json?music_style=Jazz" for ::1 at 2016-11-03 11:17:15 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"music_style"=>"Jazz"}
+  [1m[36mMusicStyle Load (0.0ms)[0m  [1m[34mSELECT  "music_styles".* FROM "music_styles" WHERE "music_styles"."name" = ? ORDER BY "music_styles"."id" ASC LIMIT ?[0m  [["name", "Jazz"], ["LIMIT", 1]]
+  [1m[36mConcertPreference Load (0.0ms)[0m  [1m[34mSELECT "concert_preferences".* FROM "concert_preferences" WHERE "concert_preferences"."style_id" = ?[0m  [["style_id", 3]]
+  Rendering concerts/search.json.jbuilder
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."id" = ?[0m  [["id", 2]]
+  Rendered concerts/_concert.json.jbuilder (31.3ms)
+  Rendered concerts/search.json.jbuilder (46.9ms)
+Completed 500 Internal Server Error in 247ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for #<Concert::ActiveRecord_Relation:0x0000000bdf9f20>
+Did you mean?  ids):
+    1: json.extract! concert, :id, :title, :location, :description, :capacity, :price, :image, :date, :created_at, :updated_at
+    2: json.url concert_url(concert, format: :json)
+  
+app/views/concerts/_concert.json.jbuilder:1:in `_app_views_concerts__concert_json_jbuilder__1757794479_60429620'
+app/views/concerts/search.json.jbuilder:1:in `_app_views_concerts_search_json_jbuilder__116138897_61649520'
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1472.0ms)
+Started GET "/concerts/search.json?music_style=Jazz" for ::1 at 2016-11-03 11:18:17 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"music_style"=>"Jazz"}
+  [1m[36mMusicStyle Load (0.0ms)[0m  [1m[34mSELECT  "music_styles".* FROM "music_styles" WHERE "music_styles"."name" = ? ORDER BY "music_styles"."id" ASC LIMIT ?[0m  [["name", "Jazz"], ["LIMIT", 1]]
+  [1m[36mConcertPreference Load (0.0ms)[0m  [1m[34mSELECT "concert_preferences".* FROM "concert_preferences" WHERE "concert_preferences"."style_id" = ?[0m  [["style_id", 3]]
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `<<' for {}:Hash
+Did you mean?  <):
+  
+app/controllers/concerts_controller.rb:98:in `block in search'
+app/controllers/concerts_controller.rb:96:in `search'
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1647.9ms)
+Started GET "/concerts/search/Jazz" for ::1 at 2016-11-03 11:21:52 +0100
+Processing by ConcertsController#search as HTML
+  Parameters: {"music_style"=>"Jazz"}
+  [1m[36mMusicStyle Load (0.0ms)[0m  [1m[34mSELECT  "music_styles".* FROM "music_styles" WHERE "music_styles"."name" = ? ORDER BY "music_styles"."id" ASC LIMIT ?[0m  [["name", "Jazz"], ["LIMIT", 1]]
+  [1m[36mConcertPreference Load (0.0ms)[0m  [1m[34mSELECT "concert_preferences".* FROM "concert_preferences" WHERE "concert_preferences"."style_id" = ?[0m  [["style_id", 3]]
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `<<' for {}:Hash
+Did you mean?  <):
+  
+app/controllers/concerts_controller.rb:98:in `block in search'
+app/controllers/concerts_controller.rb:96:in `search'
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (19.1ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1581.7ms)
+Started GET "/concerts/search/Jazz" for ::1 at 2016-11-03 11:22:15 +0100
+Processing by ConcertsController#search as HTML
+  Parameters: {"music_style"=>"Jazz"}
+  [1m[36mMusicStyle Load (0.0ms)[0m  [1m[34mSELECT  "music_styles".* FROM "music_styles" WHERE "music_styles"."name" = ? ORDER BY "music_styles"."id" ASC LIMIT ?[0m  [["name", "Jazz"], ["LIMIT", 1]]
+  [1m[36mConcertPreference Load (0.0ms)[0m  [1m[34mSELECT "concert_preferences".* FROM "concert_preferences" WHERE "concert_preferences"."style_id" = ?[0m  [["style_id", 3]]
+  Rendering concerts/search.html.erb within layouts/application
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."id" = ?[0m  [["id", 2]]
+  Rendered concerts/search.html.erb within layouts/application (46.9ms)
+Completed 500 Internal Server Error in 279ms (ActiveRecord: 15.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `location' for #<Concert::ActiveRecord_Relation:0x0000000efc67d8>):
+    1: <%- model_class = Concert -%>
+    2:   <div class="page-header">
+    3:     <h1>
+    4:       Concert(s) à <%= @concerts.first.location %> <%= @concerts.first.id %>
+    5:   </h1>
+    6:   </div>
+    7:   <table class="table table-striped">
+  
+app/views/concerts/search.html.erb:4:in `_app_views_concerts_search_html_erb__671838948_131194920'
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1734.5ms)
+Started GET "/concerts/search/Jazz" for ::1 at 2016-11-03 11:22:46 +0100
+Processing by ConcertsController#search as HTML
+  Parameters: {"music_style"=>"Jazz"}
+  [1m[36mMusicStyle Load (0.0ms)[0m  [1m[34mSELECT  "music_styles".* FROM "music_styles" WHERE "music_styles"."name" = ? ORDER BY "music_styles"."id" ASC LIMIT ?[0m  [["name", "Jazz"], ["LIMIT", 1]]
+  [1m[36mConcertPreference Load (0.0ms)[0m  [1m[34mSELECT "concert_preferences".* FROM "concert_preferences" WHERE "concert_preferences"."style_id" = ?[0m  [["style_id", 3]]
+  Rendering concerts/search.html.erb within layouts/application
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."id" = ?[0m  [["id", 2]]
+  Rendered concerts/search.html.erb within layouts/application (19.1ms)
+Completed 500 Internal Server Error in 138ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for #<Concert::ActiveRecord_Relation:0x0000000e8ca060>
+Did you mean?  ids):
+    1: <%- model_class = Concert -%>
+    2:   <div class="page-header">
+    3:     <h1>
+    4:       Concert search <%= @concerts.first.id %>
+    5:   </h1>
+    6:   </div>
+    7:   <table class="table table-striped">
+  
+app/views/concerts/search.html.erb:4:in `_app_views_concerts_search_html_erb__671838948_121863700'
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.1ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1432.6ms)
+Started GET "/concerts/search/Jazz" for ::1 at 2016-11-03 11:24:24 +0100
+Processing by ConcertsController#search as HTML
+  Parameters: {"music_style"=>"Jazz"}
+  [1m[36mMusicStyle Load (0.0ms)[0m  [1m[34mSELECT  "music_styles".* FROM "music_styles" WHERE "music_styles"."name" = ? ORDER BY "music_styles"."id" ASC LIMIT ?[0m  [["name", "Jazz"], ["LIMIT", 1]]
+  [1m[36mConcertPreference Load (0.0ms)[0m  [1m[34mSELECT "concert_preferences".* FROM "concert_preferences" WHERE "concert_preferences"."style_id" = ?[0m  [["style_id", 3]]
+  Rendering concerts/search.html.erb within layouts/application
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."id" = ?[0m  [["id", 2]]
+  Rendered concerts/search.html.erb within layouts/application (15.6ms)
+Completed 500 Internal Server Error in 400ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for #<Concert::ActiveRecord_Relation:0x0000000d5057f0>
+Did you mean?  ids):
+    1: <%- model_class = Concert -%>
+    2:   <div class="page-header">
+    3:     <h1>
+    4:       Concert search <%= @concerts[0].id %>
+    5:   </h1>
+    6:   </div>
+    7:   <table class="table table-striped">
+  
+app/views/concerts/search.html.erb:4:in `_app_views_concerts_search_html_erb__671838948_137502860'
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1364.8ms)

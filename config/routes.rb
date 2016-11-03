@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :concerts
   resources :user_preferences
   resources :reservations
+  get 'concert_preferences/search.json' => 'concert_preferences#search'
   resources :concert_preferences
 
   get 'music_styles' => 'music_styles#index'
@@ -14,7 +15,8 @@ Rails.application.routes.draw do
   root 'home#index'
   post 'concerts/:id/reservation' => 'concerts#reservation'
 
-  get 'concerts/search/:location' => 'concerts#search'
+  get 'concerts/search/:music_style' => 'concerts#search'
+
   get 'music_styles/search/:name' => 'music_styles#search'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
