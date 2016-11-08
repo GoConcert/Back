@@ -61,6 +61,29 @@ class UsersController < ApplicationController
     end
   end
 
+   def search
+	if params[:user_name]
+	then
+	concerts=Concert.where("lower(location) = ?", params[:location].downcase)
+	#then concerts=Concert.where(location: params[:location.downcase])
+	else concerts=Concert
+	end
+
+	if  params[:music_style]
+	then
+	music_styles=MusicStyle.where(name: params[:music_style])
+	style_id=music_styles.first.id
+	concert_preferences=ConcertPreference.where(style_id: style_id)
+	concert_ids=[]
+	concert_preferences.each do |concert_preference|
+	concert_ids << concert_preference.concert_id
+	end
+	concerts = concerts.where(id: concert_ids)
+	end
+
+	@concerts=concerts
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
