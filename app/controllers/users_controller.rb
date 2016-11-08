@@ -61,27 +61,19 @@ class UsersController < ApplicationController
     end
   end
 
-   def search
+  def search
 	if params[:user_name]
 	then
-	concerts=Concert.where("lower(location) = ?", params[:location].downcase)
-	#then concerts=Concert.where(location: params[:location.downcase])
-	else concerts=Concert
+	user=User.where(user_name: params[:user_name])
+	else user=User
 	end
 
-	if  params[:music_style]
+	if  params[:password]
 	then
-	music_styles=MusicStyle.where(name: params[:music_style])
-	style_id=music_styles.first.id
-	concert_preferences=ConcertPreference.where(style_id: style_id)
-	concert_ids=[]
-	concert_preferences.each do |concert_preference|
-	concert_ids << concert_preference.concert_id
-	end
-	concerts = concerts.where(id: concert_ids)
+	user=User.where(password: params[:password])
 	end
 
-	@concerts=concerts
+	@user=user
   end
 
   private
