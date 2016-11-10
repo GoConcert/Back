@@ -10868,3 +10868,413 @@ Completed 200 OK in 18ms (Views: 15.6ms | ActiveRecord: 0.2ms)
 Completed 200 OK in 18ms (Views: 14.6ms | ActiveRecord: 0.6ms)
 
 
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at C:/Users/etien/Desktop/Workshops/Back/config/environment.rb:5)
+Started GET "/" for ::1 at 2016-11-10 14:00:42 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (12.0ms)
+Started GET "/concerts" for ::1 at 2016-11-10 14:00:47 +0100
+Completed 200 OK in 5987ms (Views: 5910.7ms | ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (C:/Users/etien/Desktop/Workshops/Back/app/controllers/concerts_controller.rb:105: syntax error, unexpected '>'
+	concerts=concerts.where(date: > date)
+	                               ^):
+  
+app/controllers/concerts_controller.rb:105: syntax error, unexpected '>'
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1650.0ms)
+Started GET "/concerts" for ::1 at 2016-11-10 14:02:16 +0100
+  
+SyntaxError (C:/Users/etien/Desktop/Workshops/Back/app/controllers/concerts_controller.rb:105: syntax error, unexpected '>'
+	concerts=concerts.where(date: > date)
+	                               ^):
+  
+app/controllers/concerts_controller.rb:105: syntax error, unexpected '>'
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1817.0ms)
+Started GET "/concerts" for ::1 at 2016-11-10 14:02:36 +0100
+  
+SyntaxError (C:/Users/etien/Desktop/Workshops/Back/app/controllers/concerts_controller.rb:105: syntax error, unexpected '>'
+	concerts=concerts.where(date: > date)
+	                               ^):
+  
+app/controllers/concerts_controller.rb:105: syntax error, unexpected '>'
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (17.0ms)
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1672.0ms)
+Started GET "/concerts" for ::1 at 2016-11-10 14:02:52 +0100
+  
+SyntaxError (C:/Users/etien/Desktop/Workshops/Back/app/controllers/concerts_controller.rb:105: syntax error, unexpected tIDENTIFIER, expecting ')'
+	concerts=concerts.where("date > ?" date)
+	                                       ^):
+  
+app/controllers/concerts_controller.rb:105: syntax error, unexpected tIDENTIFIER, expecting ')'
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1899.0ms)
+Started GET "/concerts/search.json?location=Paris" for ::1 at 2016-11-10 14:03:16 +0100
+  
+SyntaxError (C:/Users/etien/Desktop/Workshops/Back/app/controllers/concerts_controller.rb:105: syntax error, unexpected tIDENTIFIER, expecting ')'
+	concerts=concerts.where("date > ?" date)
+	                                       ^):
+  
+app/controllers/concerts_controller.rb:105: syntax error, unexpected tIDENTIFIER, expecting ')'
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1673.0ms)
+Started GET "/concerts" for ::1 at 2016-11-10 14:03:45 +0100
+  
+SyntaxError (C:/Users/etien/Desktop/Workshops/Back/app/controllers/concerts_controller.rb:105: syntax error, unexpected tIDENTIFIER, expecting ')'
+	concerts=concerts.where("date = ?" date)
+	                                       ^):
+  
+app/controllers/concerts_controller.rb:105: syntax error, unexpected tIDENTIFIER, expecting ')'
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1594.0ms)
+Started GET "/concerts" for ::1 at 2016-11-10 14:04:28 +0100
+  
+SyntaxError (C:/Users/etien/Desktop/Workshops/Back/app/controllers/concerts_controller.rb:105: syntax error, unexpected tIDENTIFIER, expecting ')'
+	concerts=concerts.where("date = ?" nowd)
+	                                       ^):
+  
+app/controllers/concerts_controller.rb:105: syntax error, unexpected tIDENTIFIER, expecting ')'
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1640.0ms)
+Started GET "/concerts" for ::1 at 2016-11-10 14:06:14 +0100
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts"[0m
+  Rendered concerts/index.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 550ms (Views: 486.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/concerts/search.json?location=Paris" for ::1 at 2016-11-10 14:06:25 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"location"=>"Paris"}
+  Rendering concerts/search.json.jbuilder
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE (lower(location) = 'paris') AND "concerts"."date" = ?[0m  [["date", Thu, 10 Nov 2016 14:06:25 +0100]]
+  Rendered concerts/search.json.jbuilder (306.0ms)
+Completed 200 OK in 757ms (Views: 691.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/concerts/search.json?location=Paris" for ::1 at 2016-11-10 14:06:53 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"location"=>"Paris"}
+  Rendering concerts/search.json.jbuilder
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE (lower(location) = 'paris') AND "concerts"."date" = ?[0m  [["date", Thu, 10 Nov 2016 14:06:53 +0100]]
+  Rendered concerts/search.json.jbuilder (82.0ms)
+Completed 200 OK in 529ms (Views: 458.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/concerts/search.json?location=Paris" for ::1 at 2016-11-10 14:07:21 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"location"=>"Paris"}
+  Rendering concerts/search.json.jbuilder
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE (lower(location) = 'paris') AND (date = '2016-11-10 13:07:21.127707')[0m
+  Rendered concerts/search.json.jbuilder (87.0ms)
+Completed 200 OK in 437ms (Views: 402.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/concerts" for ::1 at 2016-11-10 14:07:25 +0100
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts"[0m
+  Rendered concerts/index.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 551ms (Views: 487.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/concerts/1/edit" for ::1 at 2016-11-10 14:07:29 +0100
+Processing by ConcertsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering concerts/edit.html.erb within layouts/application
+  Rendered concerts/_form.html.erb (78.0ms)
+  Rendered concerts/edit.html.erb within layouts/application (101.0ms)
+Completed 200 OK in 687ms (Views: 548.4ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/concerts/1" for ::1 at 2016-11-10 14:07:43 +0100
+Processing by ConcertsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pphklw5kGH7XK6eQB07vv7l++GD20uTVd53z29+HFlET7dZOMV21A0584YeG19sQAH6voeZsUqne6cjp9PDiig==", "concert"=>{"title"=>"ABC", "location"=>"Paris", "description"=>"concert des ABC", "capacity"=>"500", "price"=>"15", "image"=>"", "date"=>"2016-12-20"}, "commit"=>"Update Concert", "id"=>"1"}
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.0ms)[0m  [1m[33mUPDATE "concerts" SET "date" = ?, "updated_at" = ? WHERE "concerts"."id" = ?[0m  [["date", Tue, 20 Dec 2016], ["updated_at", 2016-11-10 13:07:44 UTC], ["id", 1]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/concerts/1
+Completed 302 Found in 36ms (ActiveRecord: 23.0ms)
+
+
+Started GET "/concerts/1" for ::1 at 2016-11-10 14:07:44 +0100
+Processing by ConcertsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (1.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering concerts/show.html.erb within layouts/application
+  Rendered concerts/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 741ms (Views: 699.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/concerts" for ::1 at 2016-11-10 14:07:48 +0100
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts"[0m
+  Rendered concerts/index.html.erb within layouts/application (89.0ms)
+Completed 200 OK in 868ms (Views: 766.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/concerts/search.json?location=Paris" for ::1 at 2016-11-10 14:07:54 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"location"=>"Paris"}
+  Rendering concerts/search.json.jbuilder
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE (lower(location) = 'paris') AND (date = '2016-11-10 13:07:54.590708')[0m
+  Rendered concerts/search.json.jbuilder (53.0ms)
+Completed 200 OK in 570ms (Views: 517.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/concerts/search.json?location=Paris" for ::1 at 2016-11-10 14:08:33 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"location"=>"Paris"}
+  Rendering concerts/search.json.jbuilder
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE (lower(location) = 'paris') AND (date = '2016-11-10 13:08:34.068716')[0m
+  Rendered concerts/search.json.jbuilder (2.0ms)
+Completed 200 OK in 307ms (Views: 211.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/concerts/search.json?location=Paris" for ::1 at 2016-11-10 14:08:50 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"location"=>"Paris"}
+  Rendering concerts/search.json.jbuilder
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE (lower(location) = 'paris') AND (date > '2016-11-10 13:08:51.388736')[0m
+  Rendered concerts/_concert.json.jbuilder (2.0ms)
+  Rendered concerts/search.json.jbuilder (24.0ms)
+Completed 200 OK in 196ms (Views: 162.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/concerts/search.json?date=2016-12-20" for ::1 at 2016-11-10 14:11:03 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"date"=>"2016-12-20"}
+  Rendering concerts/search.json.jbuilder
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."date" = ? AND (date > '2016-11-10 13:11:03.800788')[0m  [["date", "2016-12-20"]]
+  Rendered concerts/_concert.json.jbuilder (1.0ms)
+  Rendered concerts/search.json.jbuilder (21.0ms)
+Completed 200 OK in 195ms (Views: 161.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/concerts/search.json?date=2016-12-20" for ::1 at 2016-11-10 14:12:11 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"date"=>"2016-12-20"}
+  Rendering concerts/search.json.jbuilder
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."date" = ?[0m  [["date", "2016-12-20"]]
+  Rendered concerts/_concert.json.jbuilder (1.0ms)
+  Rendered concerts/search.json.jbuilder (22.1ms)
+Completed 200 OK in 196ms (Views: 163.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/concerts/search.json?date=2016-12-201" for ::1 at 2016-11-10 14:12:16 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"date"=>"2016-12-201"}
+  Rendering concerts/search.json.jbuilder
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."date" = ?[0m  [["date", "2016-12-201"]]
+  Rendered concerts/search.json.jbuilder (2.0ms)
+Completed 200 OK in 199ms (Views: 149.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/concerts/search.json?date=2016-12-21" for ::1 at 2016-11-10 14:12:22 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"date"=>"2016-12-21"}
+  Rendering concerts/search.json.jbuilder
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."date" = ?[0m  [["date", "2016-12-21"]]
+  Rendered concerts/search.json.jbuilder (84.0ms)
+Completed 200 OK in 515ms (Views: 451.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/concerts/search.json?date=2016-12-201" for ::1 at 2016-11-10 14:12:25 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"date"=>"2016-12-201"}
+  Rendering concerts/search.json.jbuilder
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."date" = ?[0m  [["date", "2016-12-201"]]
+  Rendered concerts/search.json.jbuilder (2.0ms)
+Completed 200 OK in 271ms (Views: 238.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/concerts/search.json?date=2016-12-201" for ::1 at 2016-11-10 14:12:35 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"date"=>"2016-12-201"}
+  Rendering concerts/search.json.jbuilder
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."date" = ?[0m  [["date", "2016-12-201"]]
+  Rendered concerts/search.json.jbuilder (2.0ms)
+Completed 200 OK in 256ms (Views: 231.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/concerts/search.json?date=2016-12-20" for ::1 at 2016-11-10 14:12:39 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"date"=>"2016-12-20"}
+  Rendering concerts/search.json.jbuilder
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."date" = ?[0m  [["date", "2016-12-20"]]
+  Rendered concerts/_concert.json.jbuilder (1.0ms)
+  Rendered concerts/search.json.jbuilder (10.0ms)
+Completed 200 OK in 202ms (Views: 167.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/concerts/search.json?location=Paris&date=2016-12-20" for ::1 at 2016-11-10 14:13:00 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"location"=>"Paris", "date"=>"2016-12-20"}
+  Rendering concerts/search.json.jbuilder
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."date" = ?[0m  [["date", "2016-12-20"]]
+  Rendered concerts/_concert.json.jbuilder (1.0ms)
+  Rendered concerts/search.json.jbuilder (199.0ms)
+Completed 200 OK in 646ms (Views: 612.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/concerts" for ::1 at 2016-11-10 14:22:31 +0100
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts"[0m
+  Rendered concerts/index.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 1328ms (Views: 1281.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/concerts/search.json?user_id=1" for ::1 at 2016-11-10 14:22:49 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"user_id"=>"1"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `where' for nil:NilClass):
+  
+app/controllers/concerts_controller.rb:114:in `search'
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1603.0ms)
+Started GET "/concerts/search.json?user_id=1" for ::1 at 2016-11-10 14:23:52 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"user_id"=>"1"}
+  [1m[36mReservation Load (1.0ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = ?[0m  [["user_id", 1]]
+  Rendering concerts/search.json.jbuilder
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE (date > '2016-11-10 13:23:52.547937') AND "concerts"."id" IS NULL[0m
+  Rendered concerts/search.json.jbuilder (4.0ms)
+Completed 200 OK in 218ms (Views: 149.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/reservations" for ::1 at 2016-11-10 14:24:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/reservations"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered collection of C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [41 times] (72.0ms)
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (42.0ms)
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (2012.0ms)
+Started GET "/reservations" for ::1 at 2016-11-10 14:24:34 +0100
+Processing by ReservationsController#index as HTML
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (1.0ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  Rendered reservations/index.html.erb within layouts/application (97.0ms)
+Completed 200 OK in 515ms (Views: 484.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/concerts/search.json?user_id=1" for ::1 at 2016-11-10 14:25:46 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"user_id"=>"1"}
+  [1m[36mReservation Load (0.0ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = ?[0m  [["user_id", 1]]
+  Rendering concerts/search.json.jbuilder
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE (date > '2016-11-10 13:25:46.603970') AND "concerts"."id" = 1[0m
+  Rendered concerts/_concert.json.jbuilder (1.0ms)
+  Rendered concerts/search.json.jbuilder (21.0ms)
+Completed 200 OK in 220ms (Views: 171.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/concerts/search.json?user_id=1&location=Paris" for ::1 at 2016-11-10 14:26:19 +0100
+Processing by ConcertsController#search as JSON
+  Parameters: {"user_id"=>"1", "location"=>"Paris"}
+  [1m[36mReservation Load (0.0ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = ?[0m  [["user_id", 1]]
+  Rendering concerts/search.json.jbuilder
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE (lower(location) = 'paris') AND (date > '2016-11-10 13:26:19.380002') AND "concerts"."id" = 1[0m
+  Rendered concerts/_concert.json.jbuilder (1.0ms)
+  Rendered concerts/search.json.jbuilder (170.0ms)
+Completed 200 OK in 578ms (Views: 451.8ms | ActiveRecord: 0.0ms)
+
+

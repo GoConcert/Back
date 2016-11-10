@@ -84,8 +84,7 @@ class ConcertsController < ApplicationController
   def search
 	if params[:location] 
 	then 
-	concerts=Concert.where("lower(location) = ?", params[:location].downcase)
-	#then concerts=Concert.where(location: params[:location.downcase])
+		concerts=Concert.where("lower(location) = ?", params[:location].downcase)
 	else concerts=Concert
 	end
 
@@ -100,8 +99,27 @@ class ConcertsController < ApplicationController
 	end
 	concerts = concerts.where(id: concert_ids)
 	end
-	
+
+	if params[:date]
+	then
+		concerts=Concert.where(date: params[:date])
+		else
+		now = Time.now.to_datetime
+	concerts=concerts.where("date > ?", now)
+	end
+
+	if params[:user_id]
+	then
+		concert_ids=[]
+		reservations=Reservation.where(user_id: params[:user_id])
+		reservations.each do |reservation|
+			concert_ids << reservation.concert_id
+		end
+		concerts=concerts.where(id: concert_ids)
+	end
+
 	@concerts=concerts
+	
   end
 
   private

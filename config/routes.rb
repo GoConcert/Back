@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :music_styles
   resources :concerts
   resources :concert_preferences
+  resources :reservations
 
   get 'home/index'
   root 'home#index'
