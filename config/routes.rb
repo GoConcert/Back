@@ -16,5 +16,7 @@ Rails.application.routes.draw do
   get 'users/search/:user_name' => 'users#search'
   get 'users/search/:password' => 'users#search'
 
+  post 'concerts/:concert_id/reservation' => 'concerts#reservation'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

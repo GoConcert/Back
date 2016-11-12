@@ -70,7 +70,7 @@ class ConcertsController < ApplicationController
     # On crée un nouvel objet reservation à partir des paramètres reçus
     @reservation = Reservation.new(reservation_params)
     # On précise que cet object Reservation dépend du Concert concerné
-    @reservation.concert = @concert
+    @reservation.concert_id = @concert_id
 
     respond_to do |format|
       if @reservation.save
