@@ -63,17 +63,41 @@ class UsersController < ApplicationController
 
   def search
 	if params[:user_name]
-	then
-	user=User.where(user_name: params[:user_name])
-	else user=User
+	    then
+	    user=User.where(user_name: params[:user_name])
+	else
+	    user = nil
 	end
 
-	if  params[:password]
-	then
-	user=User.where(password: params[:password])
-	end
+	music_styles = []
+    if user.nil?
+    then
+        @user = nil
+    else
+        if  params[:password].nil?
+        then
+            @user = nil
+        else
+            user=User.where(password: params[:password])
+            if user.first != nil
+            then
+                @user=user.first
+                user_preferences=UserPreference.where(user_id: user.first.id)
+                styles_ids = []
+                user_preferences.each do |pref|
+                    styles_ids << pref.style_id
+                end
+                music_styles = []
+                styles_ids.each do |id|
+                    music_styles << MusicStyle.where(id: id)
+                end
+                @music_styles=music_styles
+            else
+                @user=nil
+            end
+        end
+    end
 
-	@user=user
   end
 
   private

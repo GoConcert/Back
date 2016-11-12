@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
   get 'concerts/search.json' => 'concerts#search'
   get 'users/search.json' => 'users#search'
+
   resources :users
   resources :music_styles
   resources :concerts
   resources :concert_preferences
   resources :reservations
+  resources :user_preferences
 
   get 'home/index'
   root 'home#index'
