@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+  post 'concerts/:id/reservation' => 'concerts#reservation'
+  #  post 'concerts/:concert_id/reservation' => 'concerts#reservation'
+
   get 'concerts/search.json' => 'concerts#search'
   get 'users/search.json' => 'users#search'
 
@@ -17,8 +21,6 @@ Rails.application.routes.draw do
   get 'concerts/search/:location' => 'concerts#search'
   get 'users/search/:user_name' => 'users#search'
   get 'users/search/:password' => 'users#search'
-
-  post 'concerts/:concert_id/reservation' => 'concerts#reservation'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

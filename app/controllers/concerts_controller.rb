@@ -1,7 +1,6 @@
 class ConcertsController < ApplicationController
   before_action :set_concert, only: [:show, :edit, :update, :destroy, :reservation]
 
-
   skip_before_action :verify_authenticity_token, only: [:reservation]
 
   # GET /concerts
@@ -65,12 +64,13 @@ class ConcertsController < ApplicationController
     end
   end
 
-  # POST /concerts/1/book.json
+  # POST /concerts/1/reservation.json
   def reservation
     # On crée un nouvel objet reservation à partir des paramètres reçus
     @reservation = Reservation.new(reservation_params)
     # On précise que cet object Reservation dépend du Concert concerné
-    @reservation.concert_id = @concert_id
+    @reservation.concert = @concert
+	#    @reservation.concert_id = @concert_id
 
     respond_to do |format|
       if @reservation.save
