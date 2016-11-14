@@ -70,7 +70,6 @@ class ConcertsController < ApplicationController
     @reservation = Reservation.new(reservation_params)
     # On précise que cet object Reservation dépend du Concert concerné
     @reservation.concert = @concert
-	#    @reservation.concert_id = @concert_id
 
     respond_to do |format|
       if @reservation.save
@@ -82,44 +81,44 @@ class ConcertsController < ApplicationController
   end
 
   def search
-	concerts=Concert
+	 concerts=Concert
 
-	if params[:location] 
-	then 
-		concerts=concerts.where("lower(location) = ?", params[:location].downcase) 
-	end
+  	if params[:location] 
+  	then 
+  		concerts=concerts.where("lower(location) = ?", params[:location].downcase) 
+  	end
 
-	if  params[:music_style]
-	then
-		music_styles=MusicStyle.where("lower(name) = ?", params[:music_style].downcase)
-		style_id=music_styles.first.id
-		concert_preferences=ConcertPreference.where(style_id: style_id)
-		concert_ids=[]
-		concert_preferences.each do |concert_preference|
-			concert_ids << concert_preference.concert_id
-		end
-		concerts = concerts.where(id: concert_ids)
-	end
+  	if  params[:music_style]
+  	then
+  		music_styles=MusicStyle.where("lower(name) = ?", params[:music_style].downcase)
+  		style_id=music_styles.first.id
+  		concert_preferences=ConcertPreference.where(style_id: style_id)
+  		concert_ids=[]
+  		concert_preferences.each do |concert_preference|
+  			concert_ids << concert_preference.concert_id
+  		end
+  		concerts = concerts.where(id: concert_ids)
+  	end
 
-	if params[:date]
-	then
-		concerts=concerts.where(date: params[:date])
-	else
-		now = Time.now.to_datetime
-		concerts=concerts.where("date >= ?", now)
-	end
+  	if params[:date]
+  	then
+  		concerts=concerts.where(date: params[:date])
+  	else
+  		now = Time.now.to_datetime
+  		concerts=concerts.where("date >= ?", now)
+  	end
 
-	if params[:user_id]
-	then
-		concert_ids=[]
-		reservations=Reservation.where(user_id: params[:user_id])
-		reservations.each do |reservation|
-			concert_ids << reservation.concert_id
-		end
-		concerts=concerts.where(id: concert_ids)
-	end
+  	if params[:user_id]
+  	then
+  		concert_ids=[]
+  		reservations=Reservation.where(user_id: params[:user_id])
+  		reservations.each do |reservation|
+  		concert_ids << reservation.concert_id
+  		end
+  		concerts=concerts.where(id: concert_ids)
+  	end
 
-	@concerts=concerts
+  	@concerts=concerts
 	
   end
 

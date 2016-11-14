@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   get 'home/index'
   root 'home#index'
   get 'concerts/:id' => 'concerts#show'
-
+  get 'concerts/search/:user_id' => 'concerts#search'
   get 'concerts/search/:music_style' => 'concerts#search'
   get 'concerts/search/:location' => 'concerts#search'
   get 'users/search/:user_name' => 'users#search'
